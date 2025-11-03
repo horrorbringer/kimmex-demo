@@ -131,7 +131,7 @@
 </div>
 </div>
 <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View Details</button>
+<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 view-details-button">View Details</button>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-xl shadow-lg">
@@ -142,7 +142,7 @@
 </div>
 </div>
 <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View Details</button>
+<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 view-details-button view-details-button">View Details</button>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-xl shadow-lg">
@@ -153,7 +153,7 @@
 </div>
 </div>
 <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View Details</button>
+<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 view-details-button">View Details</button>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-xl shadow-lg">
@@ -164,7 +164,7 @@
 </div>
 </div>
 <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View Details</button>
+<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 view-details-button">View Details</button>
 </div>
 </div>
 </div>
@@ -268,4 +268,22 @@
 </div>
 </footer>
 </div>
-</body></html>
+<script>
+  // JavaScript for mobile menu toggle can be added here
+  // when click button view details it navigate to project details page
+  const viewDetailsButtons = document.querySelectorAll('.view-details-button');
+  viewDetailsButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      window.location.href = "./project-details.html";
+    });
+  });
+
+  // remove event listener from non existing class
+  viewDetailsButtons.forEach(button => {
+    button.removeEventListener('click', () => {
+      window.location.href = "./project-details.html";
+    });
+  });
+</script>
+</body>
+</html>
