@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KIM MEX Construction &amp; Design Co., Ltd.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel = "icon" type = "image/png" href = "./image/kimmex-logo.png">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2D3748',
+              secondary: '#718096',
+              accent: '#DD6B20',
+              'background-light': '#F7FAFC',
+              'background-dark': '#1A202C', 
+              neutral: '#E2E8F0',
+            },
+            fontFamily: {
+              'display': ['Poppins', 'sans-serif'],
+              'body': ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem",
+              "lg": "1.125rem",
+              "xl": "1.5rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-body bg-background-light dark:bg-background-dark text-primary dark:text-background-light">
+<div class="relative w-full overflow-x-hidden">
+<!-- Header -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-6 sm:px-10 lg:px-20 py-4 border-b border-neutral dark:border-primary/20 transition-colors duration-250">
+<div class="flex items-center gap-4 text-primary dark:text-background-light">
+<div class="size-6 text-accent">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="font-display text-xl font-bold tracking-tight">KIM MEX</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-accent transition-colors" href="./index.html">Home</a>
+<a class="text-sm font-medium hover:text-accent transition-colors" href="./service.html">Services</a>
+    <a class="text-sm font-medium hover:text-accent transition-colors" href="./projects.html">Projects</a>
+    <a class="text-sm font-medium hover:text-accent transition-colors" href="./news.html">News</a>
+<a class="text-sm font-medium hover:text-accent transition-colors" href="./about.html">About</a>
+<a class="text-sm font-medium hover:text-accent transition-colors" href="./contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-5 bg-accent text-white text-sm font-bold shadow-sm hover:bg-accent/90 transition-all duration-200">
+<span class="truncate">Request a Quote</span>
+</button>
+<button class="lg:hidden p-2 rounded-md hover:bg-neutral dark:hover:bg-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex flex-col">
+<!-- Hero Section -->
+<section class="relative px-6 sm:px-10 lg:px-20 py-16 lg:py-24">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8 text-left">
+<div class="flex flex-col gap-4">
+<h1 class="font-display text-primary dark:text-background-light text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter">
+                                Building the Future, Reliably.
+                            </h1>
+<p class="font-body text-secondary dark:text-neutral text-base md:text-lg max-w-xl">
+                                Delivering excellence and innovation in construction and design, from concept to completion. We bring your vision to life with quality, integrity, and precision.
+                            </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold shadow-md hover:bg-accent/90 transform hover:-translate-y-0.5 transition-all duration-200">
+<span class="truncate">Our Projects</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-neutral dark:bg-primary/50 text-primary dark:text-background-light text-base font-bold hover:bg-neutral/80 dark:hover:bg-primary/70 transform hover:-translate-y-0.5 transition-all duration-200">
+<span class="truncate">Get in Touch</span>
+</button>
+</div>
+</div>
+<div class="relative w-full aspect-[4/3] rounded-xl shadow-lg bg-neutral dark:bg-primary/20">
+<div class="w-full h-full bg-center bg-no-repeat bg-cover rounded-xl" data-alt="A modern architectural building with glass windows" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCjCCViPxj6RbPaXaIKC4OGk996zKW9ALsiDe713-At7QylwqeWtHuPg-OKocm180-bM64cDfUw_3ZsU5KLl7jeY8-T-AvGoLEFluJqCm6Wc5LRDDs0lz5WJYhyZ3VXeqFTZUj8vUt9dHxbrM9OJJHjzv5NGkRdmN32zpFrHKNvyDIRr3rf6KEwg7af-1l6_k380w_p1bIJ2H-QYuJVB6B5mJwuQ2CmEiWKwqiV4Hflx8n7CbRa4JQAEufO-DT18p-IjfA7MPommhg");'></div>
+</div>
+</div>
+<!-- Floating Stats -->
+<div class="max-w-7xl mx-auto mt-16 lg:-mt-16 relative z-10">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:max-w-4xl">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-neutral dark:border-primary/30 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm shadow-md">
+<p class="text-secondary dark:text-neutral text-base font-medium">Years of Experience</p>
+<p class="font-display text-primary dark:text-background-light tracking-tight text-3xl font-bold">15+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-neutral dark:border-primary/30 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm shadow-md">
+<p class="text-secondary dark:text-neutral text-base font-medium">Projects Completed</p>
+<p class="font-display text-primary dark:text-background-light tracking-tight text-3xl font-bold">250+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-neutral dark:border-primary/30 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm shadow-md">
+<p class="text-secondary dark:text-neutral text-base font-medium">Safety Record</p>
+<p class="font-display text-primary dark:text-background-light tracking-tight text-3xl font-bold">99.8%</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="px-6 sm:px-10 lg:px-20 py-16 lg:py-24 bg-neutral/30 dark:bg-primary/10">
+<div class="max-w-7xl mx-auto flex flex-col gap-10">
+<div class="text-center">
+<h2 class="font-display text-primary dark:text-background-light text-3xl md:text-4xl font-bold tracking-tight">Our Core Services</h2>
+<p class="mt-3 max-w-2xl mx-auto text-secondary dark:text-neutral">Comprehensive solutions to bring your vision to life, from foundation to finish.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="flex flex-col gap-4 rounded-xl border border-neutral dark:border-primary/30 bg-background-light dark:bg-background-dark p-6 transition-all duration-250 hover:shadow-xl hover:-translate-y-1 hover:border-accent/50">
+<span class="material-symbols-outlined text-accent text-4xl">domain</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-display text-primary dark:text-background-light text-lg font-bold">General Contracting</h3>
+<p class="text-secondary dark:text-neutral text-sm">Comprehensive management for seamless project execution from start to finish.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-neutral dark:border-primary/30 bg-background-light dark:bg-background-dark p-6 transition-all duration-250 hover:shadow-xl hover:-translate-y-1 hover:border-accent/50">
+<span class="material-symbols-outlined text-accent text-4xl">design_services</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-display text-primary dark:text-background-light text-lg font-bold">Design-Build</h3>
+<p class="text-secondary dark:text-neutral text-sm">A unified approach combining design and construction for optimal efficiency.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-neutral dark:border-primary/30 bg-background-light dark:bg-background-dark p-6 transition-all duration-250 hover:shadow-xl hover:-translate-y-1 hover:border-accent/50">
+<span class="material-symbols-outlined text-accent text-4xl">chair</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-display text-primary dark:text-background-light text-lg font-bold">Interior Design</h3>
+<p class="text-secondary dark:text-neutral text-sm">Creating functional and beautiful interior spaces that inspire.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-neutral dark:border-primary/30 bg-background-light dark:bg-background-dark p-6 transition-all duration-250 hover:shadow-xl hover:-translate-y-1 hover:border-accent/50">
+<span class="material-symbols-outlined text-accent text-4xl">list_alt</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-display text-primary dark:text-background-light text-lg font-bold">Project Management</h3>
+<p class="text-secondary dark:text-neutral text-sm">Expert oversight to ensure your project is on time and on budget.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-neutral dark:border-primary/30 bg-background-light dark:bg-background-dark p-6 transition-all duration-250 hover:shadow-xl hover:-translate-y-1 hover:border-accent/50">
+<span class="material-symbols-outlined text-accent text-4xl">construction</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-display text-primary dark:text-background-light text-lg font-bold">Renovation</h3>
+<p class="text-secondary dark:text-neutral text-sm">Modernizing and transforming existing structures with quality craftsmanship.</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-xl border border-neutral dark:border-primary/30 bg-background-light dark:bg-background-dark p-6 transition-all duration-250 hover:shadow-xl hover:-translate-y-1 hover:border-accent/50">
+<span class="material-symbols-outlined text-accent text-4xl">foundation</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-display text-primary dark:text-background-light text-lg font-bold">Structural Engineering</h3>
+<p class="text-secondary dark:text-neutral text-sm">Ensuring the integrity and safety of your build with expert engineering.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Case Study -->
+<section class="relative px-6 sm:px-10 lg:px-20 py-20 lg:py-32 bg-primary dark:bg-primary/90 text-white">
+<div class="absolute inset-0 bg-cover bg-center opacity-10" data-alt="Wide shot of a large construction site with cranes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAirj-EfxryaLROcLcvbtLTMPcNW3x4roairYKnY4cKYh3CeBnoDO7kntIBxKdQGgkFw73ZXpqzqmCzN5o2trPQoAxrcwhIPLPz5Vtq3ZrvTo3OmAFJ9qKCqL-mb_C7Sl8TfalMI08Ng14CRl30B87iGvSGS-uFBjRNjdhUo3UKQ2wvdskc3aYs6LvsU5AhG3BIOGrpJsFe869LM8S-nYQ2p7XS4GmmUxzTUTrWo2CphzhPRbqQ3wepEyaK38n_jqL-qDowGUWCU3Y')"></div>
+<div class="relative max-w-7xl mx-auto flex flex-col items-center text-center gap-8">
+<h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight">Featured Project: Downtown Corporate Tower</h2>
+<p class="max-w-3xl text-neutral/90">A landmark commercial development that reshaped the city skyline, delivered ahead of schedule and under budget through innovative project management and sustainable building practices.</p>
+<div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl text-left">
+<div class="flex flex-col gap-1 border-l-2 border-accent pl-4">
+<span class="text-sm text-neutral/80">Budget</span>
+<span class="font-bold text-xl">$45 Million</span>
+</div>
+<div class="flex flex-col gap-1 border-l-2 border-accent pl-4">
+<span class="text-sm text-neutral/80">Duration</span>
+<span class="font-bold text-xl">24 Months</span>
+</div>
+<div class="flex flex-col gap-1 border-l-2 border-accent pl-4">
+<span class="text-sm text-neutral/80">Location</span>
+<span class="font-bold text-xl">Metropolis, USA</span>
+</div>
+<div class="flex flex-col gap-1 border-l-2 border-accent pl-4">
+<span class="text-sm text-neutral/80">Status</span>
+<span class="font-bold text-xl">Delivered</span>
+</div>
+</div>
+<button class="mt-6 flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold shadow-md hover:bg-accent/90 transform hover:-translate-y-0.5 transition-all duration-200">
+<span class="truncate">View Case Study</span>
+</button>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="px-6 sm:px-10 lg:px-20 py-16 lg:py-24">
+<div class="max-w-7xl mx-auto flex flex-col gap-10">
+<div class="text-center">
+<h2 class="font-display text-primary dark:text-background-light text-3xl md:text-4xl font-bold tracking-tight">Let's Build Together</h2>
+<p class="mt-3 max-w-2xl mx-auto text-secondary dark:text-neutral">Have a project in mind? Fill out the form below or contact us directly to get started.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<form class="flex flex-col gap-6 p-8 rounded-xl border border-neutral dark:border-primary/30 bg-background-light dark:bg-background-dark shadow-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-secondary dark:text-neutral mb-1" for="name">Full Name</label>
+<input class="w-full rounded-lg border-neutral dark:border-primary/40 bg-neutral/30 dark:bg-primary/20 focus:ring-accent focus:border-accent" id="name" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-secondary dark:text-neutral mb-1" for="email">Email Address</label>
+<input class="w-full rounded-lg border-neutral dark:border-primary/40 bg-neutral/30 dark:bg-primary/20 focus:ring-accent focus:border-accent" id="email" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-secondary dark:text-neutral mb-1" for="service">Service of Interest</label>
+<select class="w-full rounded-lg border-neutral dark:border-primary/40 bg-neutral/30 dark:bg-primary/20 focus:ring-accent focus:border-accent" id="service">
+<option>General Contracting</option>
+<option>Design-Build</option>
+<option>Renovation</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-secondary dark:text-neutral mb-1" for="message">Project Details</label>
+<textarea class="w-full rounded-lg border-neutral dark:border-primary/40 bg-neutral/30 dark:bg-primary/20 focus:ring-accent focus:border-accent" id="message" rows="5"></textarea>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold shadow-md hover:bg-accent/90 transition-all duration-200" type="submit">
+<span class="truncate">Submit Request</span>
+</button>
+</form>
+<div class="flex flex-col gap-8">
+<div class="w-full aspect-video rounded-xl bg-neutral dark:bg-primary/20 overflow-hidden shadow-md" data-location="City Center" style="https://placeholder.pics/svg/300">
+<img class="w-full h-full object-cover" data-alt="A map showing the location of an office with a pin marker." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlVVnA_Dlm6jBo6bcV65xfyxjSX_bmMfLCPJ9cCATEInBcbW8jzw6irt5Ow4vwOj-id444gfsVI8pobMUd7ZQgCzWmqnJ4k3CVOjSrJ29vESVI94jEToWx2RCSp2wqUISeMjEsPUCsuk2SCu_nmmt4N8U-TswUY8jB8sXG8BHhZE_6gvU8bIWW6huT-I_fz84sSx6UZS7j7Vk5PynNcTq6iJTkwhXfYmOeJ8pcDv88a_FQgjooIcENrrUB-CyWEJFYQ-IW59PUqO4"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-accent text-2xl mt-1">call</span>
+<div>
+<h4 class="font-bold text-primary dark:text-background-light">Phone</h4>
+<p class="text-secondary dark:text-neutral">(123) 456-7890</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-accent text-2xl mt-1">mail</span>
+<div>
+<h4 class="font-bold text-primary dark:text-background-light">Email</h4>
+<p class="text-secondary dark:text-neutral">contact@kimmex.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4 col-span-1 sm:col-span-2">
+<span class="material-symbols-outlined text-accent text-2xl mt-1">location_on</span>
+<div>
+<h4 class="font-bold text-primary dark:text-background-light">Address</h4>
+<p class="text-secondary dark:text-neutral">123 Construction Ave, Builder City, ST 12345</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary text-background-light px-6 sm:px-10 lg:px-20">
+<div class="max-w-7xl mx-auto py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4 items-start col-span-1 md:col-span-2">
+<div class="flex items-center gap-4">
+<div class="size-6 text-accent">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+</div>
+<h2 class="font-display text-xl font-bold tracking-tight">KIM MEX</h2>
+</div>
+<p class="text-sm text-neutral max-w-sm">Your trusted partner in construction and design, committed to building a better future with integrity and innovation.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold font-display">Quick Links</h4>
+<a class="text-sm text-neutral hover:text-accent transition-colors" href="#">Home</a>
+<a class="text-sm text-neutral hover:text-accent transition-colors" href="./service.html">Services</a>
+<a class="text-sm text-neutral hover:text-accent transition-colors" href="./projects.html">Projects</a>
+<a class="text-sm text-neutral hover:text-accent transition-colors" href="./about.html">About</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold font-display">Connect</h4>
+<a class="text-sm text-neutral hover:text-accent transition-colors" href="#">LinkedIn</a>
+<a class="text-sm text-neutral hover:text-accent transition-colors" href="#">Facebook</a>
+<a class="text-sm text-neutral hover:text-accent transition-colors" href="#">Instagram</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto py-6 border-t border-secondary/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-sm text-neutral">© 2024 KIM MEX Co., Ltd. All Rights Reserved.</p>
+<div class="flex gap-4">
+<a class="text-sm text-neutral hover:text-accent transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-neutral hover:text-accent transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
