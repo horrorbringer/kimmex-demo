@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Services | KIM MEX Construction &amp; Design</title>
 <meta content="Explore KIM MEX construction services — general contracting, architectural design, interior fit-out, renovation, structural engineering, and project management in Cambodia." name="description"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel = "icon" type = "image/png" href = "./image/kimmex-logo.png">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Poppins:wght@700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<style>
+<style type="text/tailwindcss">
+      body {
+        --primary-blue: #1A237E;
+        --accent-red: #E41E26;
+        --background-color: #F8FAFC;
+        --surface-color: #FFFFFF;
+        --text-color: #111827;
+        --muted-color: #9AA3AF;
+        --border-color: #E5E7EB;
+        --cta-gradient: linear-gradient(to right, #1A237E, #5C2E85, #E41E26);
+      }
       .font-display { font-family: 'Inter', sans-serif; }
       .font-heading { font-family: 'Poppins', sans-serif; }
       .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+      .bg-cta-gradient { background-image: var(--cta-gradient); }
+      .text-accent { color: var(--accent-red); }
+      .text-primary { color: var(--primary-blue); }
+      .bg-primary { background-color: var(--primary-blue); }
+      .bg-accent { background-color: var(--accent-red); }
+      .border-accent { border-color: var(--accent-red); }
     </style>
 <script id="tailwind-config">
       tailwind.config = {
@@ -24,14 +38,11 @@
             colors: {
               "primary": "#1A237E",
               "accent": "#E41E26",
-              "background-light": "#F5F7FA",
-              "background-dark": "#121320",
-              "surface-light": "#FFFFFF",
-              "surface-dark": "#1A1B2A",
+              "background-light": "#F8FAFC",
+              "surface": "#FFFFFF",
               "text-light": "#111827",
-              "text-dark": "#F5F7FA",
-              "muted-light": "#9AA3AF",
-              "muted-dark": "#7E8AA3"
+              "muted": "#9AA3AF",
+              "border-color": "#E5E7EB"
             },
             fontFamily: {
               "display": ["Inter", "sans-serif"],
@@ -39,45 +50,45 @@
             },
             borderRadius: {
               "DEFAULT": "12px",
-              "lg": "18px",
-              "xl": "24px",
+              "lg": "14px",
+              "xl": "18px",
+              "2xl": "24px",
               "full": "9999px"
             },
             boxShadow: {
-              'soft': '0 4px 12px 0 rgba(0, 0, 0, 0.05)',
-              'lift': '0 10px 20px -5px rgba(0, 0, 0, 0.07)'
+              'soft': '0 10px 30px rgba(2,6,23,.08)',
+              'lift': '0 12px 35px rgba(2,6,23,.12)'
             }
           },
         },
       }
     </script>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<body class="bg-background-light font-display text-text-light">
 <div class="relative w-full flex flex-col group/design-root overflow-x-hidden">
-<!-- Sticky TopNavBar -->
-<header class="sticky top-0 z-50 w-full bg-surface-light/80 dark:bg-surface-dark/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700/50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<header class="sticky top-0 z-50 w-full bg-[#F5F7FA]/80 backdrop-blur-sm shadow-sm">
+<div class="max-w-[1200px] mx-auto px-6">
 <div class="flex items-center justify-between h-20">
-<div class="flex items-center gap-4 text-primary dark:text-white">
-<div class="size-6 text-primary dark:text-accent">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
 </svg>
 </div>
 <h2 class="font-heading text-xl font-bold tracking-[-0.015em]">KIM MEX</h2>
 </div>
 <nav class="hidden md:flex items-center gap-8">
-<a class="text-text-light dark:text-text-dark text-sm font-medium hover:text-primary dark:hover:text-accent transition-colors" href="./index.html">Home</a>
-<a class="text-primary dark:text-accent text-sm font-bold" href="#">Services</a>
-<a class="text-text-light dark:text-text-dark text-sm font-medium hover:text-primary dark:hover:text-accent transition-colors" href="./projects.html">Projects</a>
-<a class="text-text-light dark:text-text-dark text-sm font-medium hover:text-primary dark:hover:text-accent transition-colors" href="./about.html">About Us</a>
-<a class="text-text-light dark:text-text-dark text-sm font-medium hover:text-primary dark:hover:text-accent transition-colors" href="./contact.html">Contact</a>
+<a class="text-text-light text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-accent text-sm font-bold relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-0.5 after:bg-accent" href="#">Services</a>
+<a class="text-text-light text-sm font-medium hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-text-light text-sm font-medium hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-text-light text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
 </nav>
 <div class="flex items-center gap-4">
-<button class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-5 bg-accent text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<button class="hidden md:flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-accent text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
 <span class="truncate">Request a Quote</span>
 </button>
-<button class="md:hidden flex items-center justify-center size-10 rounded-lg bg-gray-100 dark:bg-gray-800 text-text-light dark:text-text-dark">
+<button class="md:hidden flex items-center justify-center size-10 rounded-lg bg-gray-100 text-text-light">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -85,163 +96,140 @@
 </div>
 </header>
 <main class="w-full">
-<!-- HeroSection -->
-<section class="relative">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+<section class="relative bg-black rounded-b-2xl overflow-hidden">
 <div class="absolute inset-0 bg-cover bg-center" data-alt="A wide-angle shot of a modern architectural building under construction." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjy3-rrqSxcMUWwWwL5VY4lcG1WBgzCfjfCA1S32cssnMqy9zNzx68d2hgfHhF2zZddAnltrHi06pZt0iJU4xAdo_XsVBvB61A7vQISm3lUwVY3Z_0yXw8_AQu2WfuLewL3Fw-HY9Qoj4CLVTiRg4-zQP0-4feIjTRSDOi9ep48RQnbenyO7YLKCZxoF0S1pEVFWH8u1TTpPVsyHSWlGYdO6P3V_O4mVjTXKV1Xp_JC0MxVKsuxy9arcmUM7VW_P3L8mZV-0YzRLY");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-black/10"></div>
-<div class="relative text-center flex flex-col items-center gap-6">
-<div class="flex flex-col gap-4 text-white max-w-4xl">
-<h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                                Services that Build with Strength &amp; Precision
-                            </h1>
-<h2 class="text-lg font-normal leading-normal text-gray-200">
-                                From design to delivery, KIM MEX provides end-to-end construction solutions.
-                            </h2>
+<div class="absolute inset-0 bg-black/60"></div>
+<div class="relative max-w-[1200px] mx-auto px-6 h-[450px] flex items-center">
+<div class="max-w-3xl text-left flex flex-col items-start gap-6">
+<div class="flex flex-col gap-4 text-white">
+<h1 class="font-heading text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"> Services that Build with Strength &amp; Precision </h1>
+<p class="text-lg font-normal leading-normal text-gray-200"> From design to delivery, KIM MEX provides end-to-end construction solutions. </p>
 </div>
-<div class="flex-wrap gap-4 flex mt-4">
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<div class="flex flex-wrap gap-4 mt-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
 <span class="truncate">Request a Quote</span>
 </button>
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-100 dark:hover:bg-gray-700 transition-all">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-transparent border border-white text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-white hover:text-text-light transition-all">
 <span class="truncate">View Projects</span>
 </button>
 </div>
 </div>
 </div>
 </section>
-<!-- Service Categories Section -->
-<section class="py-16 sm:py-24 bg-background-light dark:bg-background-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-2xl mx-auto">
-<span class="inline-block px-3 py-1 text-xs font-bold text-primary dark:text-accent bg-primary/10 dark:bg-accent/10 rounded-full mb-2">Our Core Services</span>
-<h2 class="text-3xl sm:text-4xl font-heading font-bold text-text-light dark:text-text-dark">Comprehensive Construction Solutions</h2>
+<section class="py-16 md:py-20">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto">
+<span class="inline-block px-3 py-1 text-sm font-bold uppercase text-accent font-heading">Our Core Services</span>
+<h2 class="text-3xl sm:text-4xl font-heading font-bold text-text-light mt-2">Comprehensive Construction Solutions</h2>
 </div>
 <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Service Card 1 -->
-<div class="group flex flex-col gap-4 p-6 bg-surface-light dark:bg-surface-dark rounded-lg shadow-soft hover:shadow-lift hover:-translate-y-1 border border-transparent hover:border-accent/50 transition-all duration-300">
-<div class="flex-shrink-0 size-12 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-gray-100 flex items-center justify-center">
+<div class="group flex flex-col gap-4 p-6 bg-surface rounded-xl shadow-soft hover:shadow-lift hover:-translate-y-1 border border-border-color hover:border-accent transition-all duration-300">
+<div class="flex-shrink-0 size-12 rounded-full bg-[#EEF2FF] text-primary flex items-center justify-center">
 <span class="material-symbols-outlined text-3xl">foundation</span>
 </div>
 <div>
-<h3 class="text-lg font-heading font-bold text-text-light dark:text-text-dark">General Construction</h3>
-<p class="text-muted-light dark:text-muted-dark text-sm mt-2">Comprehensive services for projects of all scales, ensuring quality and durability from the ground up.</p>
+<h3 class="text-lg font-heading font-bold text-text-light">General Construction</h3>
+<p class="text-muted text-sm mt-2">Comprehensive services for projects of all scales, ensuring quality and durability from the ground up.</p>
 </div>
-<a class="mt-auto text-sm font-bold text-primary dark:text-accent group-hover:underline" href="#">Learn More <span aria-hidden="true">→</span></a>
+<a class="mt-auto text-sm font-bold text-primary" href="#">Learn More →</a>
 </div>
-<!-- Service Card 2 -->
-<div class="group flex flex-col gap-4 p-6 bg-surface-light dark:bg-surface-dark rounded-lg shadow-soft hover:shadow-lift hover:-translate-y-1 border border-transparent hover:border-accent/50 transition-all duration-300">
-<div class="flex-shrink-0 size-12 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-gray-100 flex items-center justify-center">
+<div class="group flex flex-col gap-4 p-6 bg-surface rounded-xl shadow-soft hover:shadow-lift hover:-translate-y-1 border border-border-color hover:border-accent transition-all duration-300">
+<div class="flex-shrink-0 size-12 rounded-full bg-[#EEF2FF] text-primary flex items-center justify-center">
 <span class="material-symbols-outlined text-3xl">architecture</span>
 </div>
 <div>
-<h3 class="text-lg font-heading font-bold text-text-light dark:text-text-dark">Architectural Design</h3>
-<p class="text-muted-light dark:text-muted-dark text-sm mt-2">Innovative and functional design solutions that bring your vision to life with precision and creativity.</p>
+<h3 class="text-lg font-heading font-bold text-text-light">Architectural Design</h3>
+<p class="text-muted text-sm mt-2">Innovative and functional design solutions that bring your vision to life with precision and creativity.</p>
 </div>
-<a class="mt-auto text-sm font-bold text-primary dark:text-accent group-hover:underline" href="#">Learn More <span aria-hidden="true">→</span></a>
+<a class="mt-auto text-sm font-bold text-primary" href="#">Learn More →</a>
 </div>
-<!-- Service Card 3 -->
-<div class="group flex flex-col gap-4 p-6 bg-surface-light dark:bg-surface-dark rounded-lg shadow-soft hover:shadow-lift hover:-translate-y-1 border border-transparent hover:border-accent/50 transition-all duration-300">
-<div class="flex-shrink-0 size-12 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-gray-100 flex items-center justify-center">
+<div class="group flex flex-col gap-4 p-6 bg-surface rounded-xl shadow-soft hover:shadow-lift hover:-translate-y-1 border border-border-color hover:border-accent transition-all duration-300">
+<div class="flex-shrink-0 size-12 rounded-full bg-[#EEF2FF] text-primary flex items-center justify-center">
 <span class="material-symbols-outlined text-3xl">deck</span>
 </div>
 <div>
-<h3 class="text-lg font-heading font-bold text-text-light dark:text-text-dark">Interior Fit-Out</h3>
-<p class="text-muted-light dark:text-muted-dark text-sm mt-2">Transforming interiors into functional, aesthetic spaces that meet the highest standards of quality.</p>
+<h3 class="text-lg font-heading font-bold text-text-light">Interior Fit-Out</h3>
+<p class="text-muted text-sm mt-2">Transforming interiors into functional, aesthetic spaces that meet the highest standards of quality.</p>
 </div>
-<a class="mt-auto text-sm font-bold text-primary dark:text-accent group-hover:underline" href="#">Learn More <span aria-hidden="true">→</span></a>
+<a class="mt-auto text-sm font-bold text-primary" href="#">Learn More →</a>
 </div>
-<!-- Service Card 4 -->
-<div class="group flex flex-col gap-4 p-6 bg-surface-light dark:bg-surface-dark rounded-lg shadow-soft hover:shadow-lift hover:-translate-y-1 border border-transparent hover:border-accent/50 transition-all duration-300">
-<div class="flex-shrink-0 size-12 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-gray-100 flex items-center justify-center">
+<div class="group flex flex-col gap-4 p-6 bg-surface rounded-xl shadow-soft hover:shadow-lift hover:-translate-y-1 border border-border-color hover:border-accent transition-all duration-300">
+<div class="flex-shrink-0 size-12 rounded-full bg-[#EEF2FF] text-primary flex items-center justify-center">
 <span class="material-symbols-outlined text-3xl">construction</span>
 </div>
 <div>
-<h3 class="text-lg font-heading font-bold text-text-light dark:text-text-dark">Renovation &amp; Remodeling</h3>
-<p class="text-muted-light dark:text-muted-dark text-sm mt-2">Modernizing and upgrading existing structures to enhance their value, functionality, and appeal.</p>
+<h3 class="text-lg font-heading font-bold text-text-light">Renovation &amp; Remodeling</h3>
+<p class="text-muted text-sm mt-2">Modernizing and upgrading existing structures to enhance their value, functionality, and appeal.</p>
 </div>
-<a class="mt-auto text-sm font-bold text-primary dark:text-accent group-hover:underline" href="#">Learn More <span aria-hidden="true">→</span></a>
+<a class="mt-auto text-sm font-bold text-primary" href="#">Learn More →</a>
 </div>
-<!-- Service Card 5 -->
-<div class="group flex flex-col gap-4 p-6 bg-surface-light dark:bg-surface-dark rounded-lg shadow-soft hover:shadow-lift hover:-translate-y-1 border border-transparent hover:border-accent/50 transition-all duration-300">
-<div class="flex-shrink-0 size-12 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-gray-100 flex items-center justify-center">
+<div class="group flex flex-col gap-4 p-6 bg-surface rounded-xl shadow-soft hover:shadow-lift hover:-translate-y-1 border border-border-color hover:border-accent transition-all duration-300">
+<div class="flex-shrink-0 size-12 rounded-full bg-[#EEF2FF] text-primary flex items-center justify-center">
 <span class="material-symbols-outlined text-3xl">engineering</span>
 </div>
 <div>
-<h3 class="text-lg font-heading font-bold text-text-light dark:text-text-dark">Structural Engineering</h3>
-<p class="text-muted-light dark:text-muted-dark text-sm mt-2">Expert engineering services to ensure the structural integrity and safety of your buildings for years to come.</p>
+<h3 class="text-lg font-heading font-bold text-text-light">Structural Engineering</h3>
+<p class="text-muted text-sm mt-2">Expert engineering services to ensure the structural integrity and safety of your buildings for years to come.</p>
 </div>
-<a class="mt-auto text-sm font-bold text-primary dark:text-accent group-hover:underline" href="#">Learn More <span aria-hidden="true">→</span></a>
+<a class="mt-auto text-sm font-bold text-primary" href="#">Learn More →</a>
 </div>
-<!-- Service Card 6 -->
-<div class="group flex flex-col gap-4 p-6 bg-surface-light dark:bg-surface-dark rounded-lg shadow-soft hover:shadow-lift hover:-translate-y-1 border border-transparent hover:border-accent/50 transition-all duration-300">
-<div class="flex-shrink-0 size-12 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-gray-100 flex items-center justify-center">
+<div class="group flex flex-col gap-4 p-6 bg-surface rounded-xl shadow-soft hover:shadow-lift hover:-translate-y-1 border border-border-color hover:border-accent transition-all duration-300">
+<div class="flex-shrink-0 size-12 rounded-full bg-[#EEF2FF] text-primary flex items-center justify-center">
 <span class="material-symbols-outlined text-3xl">manage_accounts</span>
 </div>
 <div>
-<h3 class="text-lg font-heading font-bold text-text-light dark:text-text-dark">Project Management</h3>
-<p class="text-muted-light dark:text-muted-dark text-sm mt-2">End-to-end oversight ensuring your project is completed on time, within budget, and to your satisfaction.</p>
+<h3 class="text-lg font-heading font-bold text-text-light">Project Management</h3>
+<p class="text-muted text-sm mt-2">End-to-end oversight ensuring your project is completed on time, within budget, and to your satisfaction.</p>
 </div>
-<a class="mt-auto text-sm font-bold text-primary dark:text-accent group-hover:underline" href="#">Learn More <span aria-hidden="true">→</span></a>
+<a class="mt-auto text-sm font-bold text-primary" href="#">Learn More →</a>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="group flex flex-col sm:flex-row items-start gap-4 p-5 bg-surface rounded-xl shadow-soft hover:shadow-lift hover:-translate-y-1 border border-border-color hover:border-accent transition-all duration-300">
+<div class="flex-shrink-0 size-12 rounded-full bg-[#EEF2FF] text-primary flex items-center justify-center"><span class="material-symbols-outlined">sync_alt</span></div>
+<div>
+<h4 class="font-heading font-bold text-text-light">End-to-End Project Delivery</h4>
+<p class="text-muted text-sm mt-1">From planning and design to construction and handover, we manage every step.</p>
+</div>
+</div>
+<div class="group flex flex-col sm:flex-row items-start gap-4 p-5 bg-surface rounded-xl shadow-soft hover:shadow-lift hover:-translate-y-1 border border-border-color hover:border-accent transition-all duration-300">
+<div class="flex-shrink-0 size-12 rounded-full bg-[#EEF2FF] text-primary flex items-center justify-center"><span class="material-symbols-outlined">health_and_safety</span></div>
+<div>
+<h4 class="font-heading font-bold text-text-light">Safety-First Operations</h4>
+<p class="text-muted text-sm mt-1">We adhere to ISO-aligned safety standards to protect our team and your investment.</p>
+</div>
+</div>
+<div class="group flex flex-col sm:flex-row items-start gap-4 p-5 bg-surface rounded-xl shadow-soft hover:shadow-lift hover:-translate-y-1 border border-border-color hover:border-accent transition-all duration-300">
+<div class="flex-shrink-0 size-12 rounded-full bg-[#EEF2FF] text-primary flex items-center justify-center"><span class="material-symbols-outlined">monitoring</span></div>
+<div>
+<h4 class="font-heading font-bold text-text-light">Transparent Reporting</h4>
+<p class="text-muted text-sm mt-1">Clients have access to progress updates, photos, and cost control dashboards.</p>
+</div>
 </div>
 </div>
 </div>
 </section>
-<!-- Industries We Serve Section -->
-<section class="py-16 sm:py-24 bg-surface-light dark:bg-surface-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center max-w-2xl mx-auto">
-<span class="inline-block px-3 py-1 text-xs font-bold text-primary dark:text-accent bg-primary/10 dark:bg-accent/10 rounded-full mb-2">Our Expertise</span>
-<h2 class="text-3xl sm:text-4xl font-heading font-bold text-text-light dark:text-text-dark">Industries We Serve</h2>
-<p class="mt-4 text-muted-light dark:text-muted-dark">We bring specialized knowledge and tailored solutions to a wide range of sectors, ensuring every project meets industry-specific standards and demands.</p>
+<section class="py-16 md:py-20 bg-surface">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto">
+<span class="inline-block px-3 py-1 text-sm font-bold uppercase text-accent font-heading">Our Expertise</span>
+<h2 class="text-3xl sm:text-4xl font-heading font-bold text-text-light mt-2">Industries We Serve</h2>
+<p class="mt-4 text-muted">We bring specialized knowledge and tailored solutions to a wide range of sectors, ensuring every project meets industry-specific standards and demands.</p>
 </div>
 <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-<div class="relative group aspect-[4/3] rounded-lg overflow-hidden">
-<div class="w-full h-full bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Modern residential home exterior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACpJEJxnIioJ0JyQG2YPVoBhtK67PVLm8q2Q-ag7P8vw92R_07w8zpHTrxk7CnBVGu3iBfqdoy6-fsz2FBzxP-he48ZYo2tOP6OSSmEH7tykZancq8poZv7KEFZCMwurv2b3-StxgCC5RIDucsbe0_sF3NXHhA7T9TZcb32in1ZxEfr61c0Y9LJkAp9o1YljXo6X6LDoHks9WxnqUsoMGOBBhdCR6pMDGSTjrEF73BxD5F9ONXShP6_ZpQXBKe4zdrckkBt7LDUhY");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-<p class="absolute bottom-4 left-4 text-white text-lg font-bold">Residential</p>
-</div>
-<div class="relative group aspect-[4/3] rounded-lg overflow-hidden">
-<div class="w-full h-full bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Sleek commercial office building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsDYo8OTV5skWfNG-tVT_19Uin2GYR0vG4wRLblshSTWp5_zfDqvOV4L6upK8iXBnlmBKjjFTWqBKbE8Ph0fwSqnIjBu2n5HiiSYZv-I78HAwKaUjL0ANsb6eQ6cC6l254JGczL9Xqb3NScpaZh2JKnbKytbrmxMejhSya0ow96_I-XhvT_eEwwQkY1raGv7D3JoCpLZ4yCEuOQ1GAGHnBjiPSA0Nil01_1ShD27X2S7Ff6VMoQCQTvk8vNzyU1nh7V0DXlvFYlrk");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-<p class="absolute bottom-4 left-4 text-white text-lg font-bold">Commercial</p>
-</div>
-<div class="relative group aspect-[4/3] rounded-lg overflow-hidden">
-<div class="w-full h-full bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Large industrial warehouse facility" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGrr4Rp4WtvYvAcw3hJpUWGRMHqPRkSgaUnxHe1dKaYdgDvyI0eeicLwSvbsBlasArdKMa8atv2jIpphs7qpXq-Wz0fvMt2S68OZcP-GuuTERH_kma_UuKZpGxl9AjWUlEY2u5lpruCihA22op7I7IfDqttn5x7zKe7LECiTjAytpVUVw0ZVef9-IborP48xN3w3enUEok0eZBw_OAqvRwqE-UTpdfL6IFs7QoPZi8EQ6Glse9cY7sEL6z0bih0pAel1U0Lm0KLWk");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-<p class="absolute bottom-4 left-4 text-white text-lg font-bold">Industrial</p>
-</div>
-<div class="relative group aspect-[4/3] rounded-lg overflow-hidden">
-<div class="w-full h-full bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Luxury hotel lobby" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKAQUrHkh6AxDBonqnsLQr7KJd-n-4ZD7g0IGHfuP-yWopIVDdHUXULb7tg_k95ntNZzGq6uym2gR6IxXVfOweiC2kfyBlQQBG2K9Qp83HiXZMElVC_k54rdS939gq-kTfBKQhW0YmVCyTyBjzMA9abITocGu1qXu2sJYM_3jot5mvP-4_EHwm2Q4ASPL4Udj50Je2eVtrd27Nmp4qAWKNYPyJkjSiFKnJ6nw17Df49slceVrMLnEB8ypwrx1v1oXCnX0bZHwwA-0");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-<p class="absolute bottom-4 left-4 text-white text-lg font-bold">Hospitality</p>
-</div>
-<div class="relative group aspect-[4/3] rounded-lg overflow-hidden">
-<div class="w-full h-full bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Modern retail store interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcgZC4kjTLH0uOlm7AwcF7kNO4_H5zOA97TQe265HwV0rzCMko76jROcsqHKtk-Ks8FAGI3wDcRO4rDzcR90-APz_1dopRdIwZVREgJYtramq0Pp5q8HgHlMfLKCafqk5i3uMXfqD0lDXQBn6CKIrcwqBZzYqUoaHlirwUoaHEb1ZLjSGA9xJ01hRThSwQOeVeEn7Egzxs8eQNeBl_dMeQPNiPOv9m1usjj-yxePoF7Tk-TpDjZjdKW5Il9Vyzn1lfV5kwOH0Bzi4");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-<p class="absolute bottom-4 left-4 text-white text-lg font-bold">Retail</p>
-</div>
-<div class="relative group aspect-[4/3] rounded-lg overflow-hidden">
-<div class="w-full h-full bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="University campus building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHFZfVBIgV9AnIssUe1hAO-zJEARkPWIU-j7z2C3yBxams368nWayC5t5sjiQeTGHyCXYWbj93f3kmFUUWC6w0RbPSOmafiW7cl3UVgI4DohCeJDBfnItoJ2TwdIlR0jpB1r13ZWAHyJ8P35wtn1uwOOaaFXt__grdrr9mSNyD_63vBZVFAdAJXBSKvFpuNm9gVP65cp8ypV3tDYLOEkq0yq13j_jgs86CxcFzei2Cb-ykS2nHhtCjJ9QdqQNyEPx0gEkJ4zRN_1s");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-<p class="absolute bottom-4 left-4 text-white text-lg font-bold">Education</p>
-</div>
-<div class="relative group aspect-[4/3] rounded-lg overflow-hidden">
-<div class="w-full h-full bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Clean and modern hospital hallway" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwl1AUAVOE4fYNh-pF_HU5QOkvHqNhw2FxYt5l2s2sQ9lhYkIBhHlY5ZgFpKmS1SgGcRxdyOB7JYUPDxO51w2X3mYbiGuknjVoWJxvllQuOx1X7NW_uo-yco6TxxhYteMSLUfZ8-eDPjsw8OMdWhJapGm4b9WmfALSE3xq2smT3Z4rMQ2Mjb5SlGeY3kfVEU2Y9g7Yuw-KKhKWYIKearXsJHNoZzm4klSLig8kqzoU8RT_cwgfo8JZizr0CEExqGFRzg_RyTzBPHQ");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-<p class="absolute bottom-4 left-4 text-white text-lg font-bold">Healthcare</p>
-</div>
-<div class="relative group aspect-[4/3] rounded-lg overflow-hidden">
-<div class="w-full h-full bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Abstract gradient for more industries" style="background-image: linear-gradient(45deg, #1A237E, #E41E26);"></div>
-<div class="absolute inset-0 bg-black/30"></div>
-<p class="absolute bottom-4 left-4 text-white text-lg font-bold">And More</p>
-</div>
+<div class="relative group aspect-[4/3] rounded-xl overflow-hidden h-64"><div class="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Modern residential home exterior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACpJEJxnIioJ0JyQG2YPVoBhtK67PVLm8q2Q-ag7P8vw92R_07w8zpHTrxk7CnBVGu3iBfqdoy6-fsz2FBzxP-he48ZYo2tOP6OSSmEH7tykZancq8poZv7KEFZCMwurv2b3-StxgCC5RIDucsbe0_sF3NXHhA7T9TZcb32in1ZxEfr61c0Y9LJkAp9o1YljXo6X6LDoHks9WxnqUsoMGOBBhdCR6pMDGSTjrEF73BxD5F9ONXShP6_ZpQXBKe4zdrckkBt7LDUhY");'></div><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-colors"></div><p class="absolute bottom-4 left-4 text-white text-lg font-bold font-heading">Residential</p></div>
+<div class="relative group aspect-[4/3] rounded-xl overflow-hidden h-64"><div class="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Sleek commercial office building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsDYo8OTV5skWfNG-tVT_19Uin2GYR0vG4wRLblshSTWp5_zfDqvOV4L6upK8iXBnlmBKjjFTWqBKbE8Ph0fwSqnIjBu2n5HiiSYZv-I78HAwKaUjL0ANsb6eQ6cC6l254JGczL9Xqb3NScpaZh2JKnbKytbrmxMejhSya0ow96_I-XhvT_eEwwQkY1raGv7D3JoCpLZ4yCEuOQ1GAGHnBjiPSA0Nil01_1ShD27X2S7Ff6VMoQCQTvk8vNzyU1nh7V0DXlvFYlrk");'></div><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-colors"></div><p class="absolute bottom-4 left-4 text-white text-lg font-bold font-heading">Commercial</p></div>
+<div class="relative group aspect-[4/3] rounded-xl overflow-hidden h-64"><div class="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Large industrial warehouse facility" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGrr4Rp4WtvYvAcw3hJpUWGRMHqPRkSgaUnxHe1dKaYdgDvyI0eeicLwSvbsBlasArdKMa8atv2jIpphs7qpXq-Wz0fvMt2S68OZcP-GuuTERH_kma_UuKZpGxl9AjWUlEY2u5lpruCihA22op7I7IfDqttn5x7zKe7LECiTjAytpVUVw0ZVef9-IborP48xN3w3enUEok0eZBw_OAqvRwqE-UTpdfL6IFs7QoPZi8EQ6Glse9cY7sEL6z0bih0pAel1U0Lm0KLWk");'></div><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-colors"></div><p class="absolute bottom-4 left-4 text-white text-lg font-bold font-heading">Industrial</p></div>
+<div class="relative group aspect-[4/3] rounded-xl overflow-hidden h-64"><div class="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Luxury hotel lobby" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKAQUrHkh6AxDBonqnsLQr7KJd-n-4ZD7g0IGHfuP-yWopIVDdHUXULb7tg_k95ntNZzGq6uym2gR6IxXVfOweiC2kfyBlQQBG2K9Qp83HiXZMElVC_k54rdS939gq-kTfBKQhW0YmVCyTyBjzMA9abITocGu1qXu2sJYM_3jot5mvP-4_EHwm2Q4ASPL4Udj50Je2eVtrd27Nmp4qAWKNYPyJkjSiFKnJ6nw17Df49slceVrMLnEB8ypwrx1v1oXCnX0bZHwwA-0");'></div><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-colors"></div><p class="absolute bottom-4 left-4 text-white text-lg font-bold font-heading">Hospitality</p></div>
+<div class="relative group aspect-[4/3] rounded-xl overflow-hidden h-64"><div class="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Modern retail store interior" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcgZC4kjTLH0uOlm7AwcF7kNO4_H5zOA97TQe265HwV0rzCMko76jROcsqHKtk-Ks8FAGI3wDcRO4rDzcR90-APz_1dopRdIwZVREgJYtramq0Pp5q8HgHlMfLKCafqk5i3uMXfqD0lDXQBn6CKIrcwqBZzYqUoaHlirwUoaHEb1ZLjSGA9xJ01hRThSwQOeVeEn7Egzxs8eQNeBl_dMeQPNiPOv9m1usjj-yxePoF7Tk-TpDjZjdKW5Il9Vyzn1lfV5kwOH0Bzi4");'></div><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-colors"></div><p class="absolute bottom-4 left-4 text-white text-lg font-bold font-heading">Retail</p></div>
+<div class="relative group aspect-[4/3] rounded-xl overflow-hidden h-64"><div class="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="University campus building" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBHFZfVBIgV9AnIssUe1hAO-zJEARkPWIU-j7z2C3yBxams368nWayC5t5sjiQeTGHyCXYWbj93f3kmFUUWC6w0RbPSOmafiW7cl3UVgI4DohCeJDBfnItoJ2TwdIlR0jpB1r13ZWAHyJ8P35wtn1uwOOaaFXt__grdrr9mSNyD_63vBZVFAdAJXBSKvFpuNm9gVP65cp8ypV3tDYLOEkq0yq13j_jgs86CxcFzei2Cb-ykS2nHhtCjJ9QdqQNyEPx0gEkJ4zRN_1s");'></div><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-colors"></div><p class="absolute bottom-4 left-4 text-white text-lg font-bold font-heading">Education</p></div>
+<div class="relative group aspect-[4/3] rounded-xl overflow-hidden h-64"><div class="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" data-alt="Clean and modern hospital hallway" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwl1AUAVOE4fYNh-pF_HU5QOkvHqNhw2FxYt5l2s2sQ9lhYkIBhHlY5ZgFpKmS1SgGcRxdyOB7JYUPDxO51w2X3mYbiGuknjVoWJxvllQuOx1X7NW_uo-yco6TxxhYteMSLUfZ8-eDPjsw8OMdWhJapGm4b9WmfALSE3xq2smT3Z4rMQ2Mjb5SlGeY3kfVEU2Y9g7Yuw-KKhKWYIKearXsJHNoZzm4klSLig8kqzoU8RT_cwgfo8JZizr0CEExqGFRzg_RyTzBPHQ");'></div><div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent group-hover:from-black/50 transition-colors"></div><p class="absolute bottom-4 left-4 text-white text-lg font-bold font-heading">Healthcare</p></div>
+<div class="relative group aspect-[4/3] rounded-xl overflow-hidden h-64"><div class="absolute inset-0 bg-center bg-cover transition-transform duration-300 group-hover:scale-105" style="background-image: linear-gradient(to right, #1A237E, #5C2E85, #E41E26);"></div><div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div><p class="absolute bottom-4 left-4 text-white text-lg font-bold font-heading">And More</p></div>
 </div>
 </div>
 </section>
-<!-- CTA Section -->
-<section class="bg-gradient-to-r from-primary to-blue-900 dark:from-primary dark:to-black">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+<section class="bg-cta-gradient">
+<div class="max-w-[1200px] mx-auto px-6 py-16 md:py-20">
 <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
 <div class="text-white">
 <h2 class="text-3xl sm:text-4xl font-heading font-bold">Ready to build with KIM MEX?</h2>
@@ -252,19 +240,19 @@
 <form action="#" class="grid grid-cols-1 sm:grid-cols-2 gap-4" method="POST">
 <div>
 <label class="sr-only" for="name">Name</label>
-<input autocomplete="name" class="block w-full rounded-lg border-0 bg-white/10 dark:bg-white/5 py-3 px-4 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent" id="name" name="name" placeholder="Full Name" type="text"/>
+<input autocomplete="name" class="block w-full rounded-lg border-0 bg-white/10 py-3 px-4 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent" id="name" name="name" placeholder="Full Name" type="text"/>
 </div>
 <div>
 <label class="sr-only" for="email">Email</label>
-<input autocomplete="email" class="block w-full rounded-lg border-0 bg-white/10 dark:bg-white/5 py-3 px-4 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent" id="email" name="email" placeholder="Email Address" type="email"/>
+<input autocomplete="email" class="block w-full rounded-lg border-0 bg-white/10 py-3 px-4 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent" id="email" name="email" placeholder="Email Address" type="email"/>
 </div>
 <div>
 <label class="sr-only" for="phone">Phone</label>
-<input autocomplete="tel" class="block w-full rounded-lg border-0 bg-white/10 dark:bg-white/5 py-3 px-4 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent" id="phone" name="phone" placeholder="Phone Number" type="tel"/>
+<input autocomplete="tel" class="block w-full rounded-lg border-0 bg-white/10 py-3 px-4 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent" id="phone" name="phone" placeholder="Phone Number" type="tel"/>
 </div>
 <div>
 <label class="sr-only" for="project-type">Project Type</label>
-<select class="block w-full rounded-lg border-0 bg-white/10 dark:bg-white/5 py-3 px-4 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent" id="project-type" name="project-type">
+<select class="block w-full rounded-lg border-0 bg-white/10 py-3 px-4 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent" id="project-type" name="project-type">
 <option>Project Type</option>
 <option>Residential</option>
 <option>Commercial</option>
@@ -273,10 +261,10 @@
 </div>
 <div class="sm:col-span-2">
 <label class="sr-only" for="message">Message</label>
-<textarea class="block w-full rounded-lg border-0 bg-white/10 dark:bg-white/5 py-3 px-4 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent" id="message" name="message" placeholder="Your Message" rows="4"></textarea>
+<textarea class="block w-full rounded-lg border-0 bg-white/10 py-3 px-4 text-white placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-accent" id="message" name="message" placeholder="Your Message" rows="4"></textarea>
 </div>
 <div class="sm:col-span-2">
-<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all" type="submit">
+<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity" type="submit">
 <span class="truncate">Request a Quote</span>
 </button>
 </div>
@@ -285,6 +273,86 @@
 </div>
 </div>
 </section>
-</main>
+<section class="py-16 md:py-20">
+<div class="max-w-[1200px] mx-auto px-6">
+<div class="text-center max-w-3xl mx-auto">
+<h2 class="text-3xl sm:text-4xl font-heading font-bold text-text-light">Latest from KIM MEX</h2>
+<p class="mt-4 text-muted">Updates on our projects, services, and safety programs.</p>
 </div>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group flex flex-col bg-surface rounded-xl overflow-hidden border border-border-color shadow-soft hover:shadow-lift transition-all duration-300">
+<div class="aspect-video overflow-hidden">
+<img alt="Construction site with safety measures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwl1AUAVOE4fYNh-pF_HU5QOkvHqNhw2FxYt5l2s2sQ9lhYkIBhHlY5ZgFpKmS1SgGcRxdyOB7JYUPDxO51w2X3mYbiGuknjVoWJxvllQuOx1X7NW_uo-yco6TxxhYteMSLUfZ8-eDPjsw8OMdWhJapGm4b9WmfALSE3xq2smT3Z4rMQ2Mjb5SlGeY3kfVEU2Y9g7Yuw-KKhKWYIKearXsJHNoZzm4klSLig8kqzoU8RT_cwgfo8JZizr0CEExqGFRzg_RyTzBPHQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-4 text-sm">
+<span class="font-bold text-accent">Safety</span>
+<span class="text-muted">Oct 15, 2023</span>
+</div>
+<h3 class="mt-3 font-heading font-bold text-xl text-text-light">New Safety Protocols Implemented Across All Sites</h3>
+<a class="mt-auto pt-4 text-sm font-bold text-primary" href="#">Read More →</a>
+</div>
+</div>
+<div class="group flex flex-col bg-surface rounded-xl overflow-hidden border border-border-color shadow-soft hover:shadow-lift transition-all duration-300">
+<div class="aspect-video overflow-hidden">
+<img alt="Modern architectural building facade" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsDYo8OTV5skWfNG-tVT_19Uin2GYR0vG4wRLblshSTWp5_zfDqvOV4L6upK8iXBnlmBKjjFTWqBKbE8Ph0fwSqnIjBu2n5HiiSYZv-I78HAwKaUjL0ANsb6eQ6cC6l254JGczL9Xqb3NScpaZh2JKnbKytbrmxMejhSya0ow96_I-XhvT_eEwwQkY1raGv7D3JoCpLZ4yCEuOQ1GAGHnBjiPSA0Nil01_1ShD27X2S7Ff6VMoQCQTvk8vNzyU1nh7V0DXlvFYlrk"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex items-center gap-4 text-sm">
+<span class="font-bold text-accent">Service</span>
+<span class="text-muted">Sep 28, 2023</span>
+</div>
+<h3 class="mt-3 font-heading font-bold text-xl text-text-light">KIM MEX Expands Interior Fit-Out Service Offerings</h3>
+<a class="mt-auto pt-4 text-sm font-bold text-primary" href="#">Read More →</a>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="flex sm:inline-flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-transparent border border-border-color text-text-light text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-50 transition-colors">
+<span class="truncate">View All News</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-primary text-white">
+<div class="max-w-[1200px] mx-auto px-6 py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-1">
+<div class="flex items-center gap-4 text-white"><div class="size-6 text-accent"><svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg></div><h2 class="font-heading text-xl font-bold tracking-[-0.015em]">KIM MEX</h2></div>
+<p class="mt-4 text-sm text-gray-300">Building Cambodia's future with strength, precision, and integrity since 2009.</p>
+</div>
+<div>
+<h4 class="font-heading font-bold">Quick Links</h4>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-gray-300 hover:text-white transition-colors" href="#">Home</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors" href="#">Services</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors" href="#">Projects</a></li>
+<li><a class="text-gray-300 hover:text-white transition-colors" href="#">About Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-heading font-bold">Contact Us</h4>
+<ul class="mt-4 space-y-2 text-sm text-gray-300">
+<li>(855) 23 999 888</li>
+<li>info@kimmex.com</li>
+<li>No. 123, St. 456, Phnom Penh, Cambodia</li>
+</ul>
+</div>
+<div>
+<h4 class="font-heading font-bold">Follow Us</h4>
+<div class="mt-4 flex space-x-4">
+<a class="text-gray-300 hover:text-white transition-colors" href="#"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0h-21.35C.585 0 0 .585 0 1.325v21.35C0 23.415.585 24 1.325 24H12.82v-9.29h-3.09V11.07h3.09V8.4c0-3.07 1.83-4.77 4.63-4.77 1.32 0 2.46.1 2.79.14v3.24h-1.92c-1.49 0-1.78.71-1.78 1.74v2.29h3.59l-.47 3.64h-3.12V24h5.68c.74 0 1.32-.585 1.32-1.325V1.325C24 .585 23.415 0 22.675 0z"></path></svg></a>
+<a class="text-gray-300 hover:text-white transition-colors" href="#"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.28-.059-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg></a>
+<a class="text-gray-300 hover:text-white transition-colors" href="#"><svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.299 1.634 4.218 3.801 4.654-.707.192-1.455.221-2.209.084.616 1.924 2.404 3.32 4.524 3.36-1.798 1.407-4.069 2.245-6.516 2.245-.425 0-.845-.025-1.258-.074 2.324 1.493 5.078 2.368 8.04 2.368 9.638 0 14.904-7.994 14.607-14.61A10.517 10.517 0 0024 4.557z"></path></svg></a>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-white/20 text-center text-sm text-gray-400">
+<p>© 2023 KIM MEX Construction &amp; Design Co., Ltd. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+
 </body></html>
