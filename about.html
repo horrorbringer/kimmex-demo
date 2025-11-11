@@ -1,290 +1,324 @@
 <!DOCTYPE html>
 
-<html lang="en"><head>
+<html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>About Us - KIM MEX Construction &amp; Design Co., Ltd.</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel = "icon" type = "image/png" href = "./image/kimmex-logo.png">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;family=Poppins:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
-<script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#1A237E",
-              "accent": "#E41E26",
-              "background": "#F5F7FA",
-              "text-primary": "#111827",
-              "text-muted": "#9AA3AF"
-            },
-            fontFamily: {
-              "display": ["Poppins", "sans-serif"],
-              "body": ["Inter", "sans-serif"]
-            },
-            borderRadius: {
-              "DEFAULT": "0.5rem",
-              "lg": "0.75rem",
-              "xl": "1rem",
-              "full": "9999px"
-            },
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#E41E26", // Red accent
+            "secondary": "#0F172A", // Dark Slate for text and dark bg
+            "background-light": "#F5F7FA",
+            "background-dark": "#101222",
+            "card-light": "#FFFFFF",
+            "card-dark": "#1a1c2c",
+            "border-light": "#E5E7EB",
+            "border-dark": "#33364a",
           },
+          fontFamily: {
+            "display": ["Poppins", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            "DEFAULT": "18px",
+            "lg": "18px",
+            "xl": "18px",
+            "full": "9999px"
+          },
+          boxShadow: {
+            'custom': '0 10px 30px rgba(2, 6, 23, 0.08)',
+          },
+          backgroundImage: {
+            'cta-gradient': 'linear-gradient(to top, #6d28d9, #be185d)',
+          }
         },
-      }
-    </script>
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
-<body class="bg-background font-body text-text-primary">
+<body class="bg-background-light dark:bg-background-dark font-body text-secondary dark:text-gray-300">
 <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
 <!-- TopNavBar -->
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
-<div class="container mx-auto px-4">
-<div class="flex items-center justify-between whitespace-nowrap h-20">
-<div class="flex items-center gap-4 text-text-primary">
-<div class="size-6 text-primary">
+<header class="sticky top-0 z-50 bg-card-light dark:bg-card-dark shadow-sm">
+<div class="mx-auto flex max-w-[1200px] items-center justify-between whitespace-nowrap px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="size-6 text-secondary dark:text-white">
 <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
 </svg>
 </div>
-<h2 class="text-text-primary text-xl font-bold leading-tight tracking-[-0.015em] font-display">KIM MEX</h2>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-secondary dark:text-white">KIM MEX</h2>
 </div>
-<nav class="hidden md:flex items-center gap-9">
-<a class="text-text-primary text-sm font-medium leading-normal hover:text-primary transition-colors" href="./index.html">Home</a>
-<a class="text-text-primary text-sm font-medium leading-normal hover:text-primary transition-colors" href="./projects.html">Projects</a>
-<a class="text-primary text-sm font-bold leading-normal border-b-2 border-primary" href="#">About Us</a>
-<a class="text-text-primary text-sm font-medium leading-normal hover:text-primary transition-colors" href="./contact.html">Contact</a>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium leading-normal text-secondary/70 dark:text-gray-400 hover:text-secondary dark:hover:text-white" href="#">Home</a>
+<a class="relative text-sm font-medium leading-normal text-secondary dark:text-white" href="#">
+              About
+              <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-primary"></span>
+</a>
+<a class="text-sm font-medium leading-normal text-secondary/70 dark:text-gray-400 hover:text-secondary dark:hover:text-white" href="#">Services</a>
+<a class="text-sm font-medium leading-normal text-secondary/70 dark:text-gray-400 hover:text-secondary dark:hover:text-white" href="#">Projects</a>
+<a class="text-sm font-medium leading-normal text-secondary/70 dark:text-gray-400 hover:text-secondary dark:hover:text-white" href="#">News</a>
+<a class="text-sm font-medium leading-normal text-secondary/70 dark:text-gray-400 hover:text-secondary dark:hover:text-white" href="#">Contact</a>
 </nav>
-<div class="flex items-center gap-4">
-<button class="hidden md:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
-<span class="truncate">Request a Quote</span>
+<button class="md:hidden text-secondary dark:text-white">
+<span class="material-symbols-outlined">menu</span>
 </button>
-<button class="md:hidden text-text-primary">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-</div>
 </div>
 </header>
 <main class="flex-1">
 <!-- HeroSection -->
-<section class="@container">
-<div class="flex min-h-[60vh] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-8 text-center" data-alt="Wide-angle shot of a modern architectural building under construction at sunset" style='background-image: linear-gradient(rgba(17, 24, 39, 0.6) 0%, rgba(17, 24, 39, 0.8) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-Z7baVnLUcY4e-bMTPXXMB2zr0hGZgwE1c-AdRfweD9ToLLZBEM6j4-SOTwi2s7oqiDzzz7bNhfAG6p45zatA50n3-zVcZD6TaljkUCRs_LTi03IoqsqmxoF5wxooHhH2INrm_1hmFMzZlGMBKas7-TQj8SYIz0xNdoHYT2Kp3LAj6zb8SXYTsvQ2K6D-kiqvII6x0GFd6XwhwEL2bwT28Satv6w2oL_pJWQahKgy-jCFWCn-h7WWAuW9IGQLPV0vIS6WaVP31EM");'>
-<div class="flex flex-col gap-4 max-w-4xl">
-<h1 class="text-white text-4xl font-black leading-tight tracking-tight font-display md:text-6xl">We Build with Strength and Precision.</h1>
-<p class="text-gray-200 text-base font-normal leading-normal md:text-lg">KIM MEX Construction &amp; Design Co., Ltd. — trusted Cambodian contractor for construction, design, and engineering.</p>
+<section class="flex min-h-[480px] flex-col items-center justify-center bg-cover bg-center bg-no-repeat p-4" data-alt="Wide shot of a modern construction site at dusk" style='background-image: linear-gradient(rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%), url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");'>
+<div class="flex max-w-3xl flex-col gap-4 text-center">
+<h1 class="font-display text-4xl font-bold leading-tight tracking-tighter text-white md:text-5xl">
+              We Build with Strength and Precision.
+            </h1>
+<h2 class="text-base font-normal leading-normal text-white/90 md:text-lg">
+              KIM MEX Construction &amp; Design Co., Ltd. — trusted Cambodian contractor for construction, design, and engineering.
+            </h2>
 </div>
-<div class="flex-wrap gap-4 flex justify-center mt-4">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity"><span class="truncate">View Projects</span></button>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white text-text-primary text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-200 transition-colors"><span class="truncate">Request a Quote</span></button>
-</div>
+<div class="mt-8 flex flex-wrap justify-center gap-4">
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-wide transition hover:opacity-90">
+<span class="truncate">View Projects</span>
+</button>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-white/10 text-white backdrop-blur-sm border border-white/20 text-base font-bold leading-normal tracking-wide transition hover:bg-white/20">
+<span class="truncate">Request a Quote</span>
+</button>
 </div>
 </section>
-<!-- Company Story Section -->
-<section class="py-16 md:py-24 bg-white">
-<div class="container mx-auto px-4">
-<div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-<div class="w-full h-80 md:h-full rounded-xl overflow-hidden shadow-lg">
-<img class="w-full h-full object-cover" data-alt="A team of construction workers in a meeting on a building site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABkCc_EahGU72-1Rc9Rt_N5aqtigLYkOOYrCIkV348-x9IiMzbMJ5J0zLStI51g_o59dO9Q81VdNoQLD1GiUp5SOrePjmIFKTiTaRlclVCli8KlbzvspnczGnvy-m80_OC9hhnQFSrewJF0Fw1HX5k2qr7MPPH0AgeO4YuWHCVihDogqtoZYG2-YskqZLVSGf3kvah75duXuTBjAVEpM6a6jCEGo-K6Mw1xFLyGB5fiucmD9o2euQ-7qkS811hjvynqfSw42wdKUI"/>
+<!-- Our Story Section -->
+<section class="mx-auto max-w-[1200px] px-6 py-16 md:py-20">
+<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+<div class="w-full">
+<img alt="A group of construction workers and engineers in a meeting" class="aspect-[4/3] w-full rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuKAKDJ6varYYamkTQ13zf3q53zQv7e28aTWfdPpuo5aSafj9hSefpojmpcP8SE5Tk_4eoVZaMQReMjepxU2XhYCzxk0vKTaUkPa1uYwsOSJ9Q_23E3F0kRS5cchzdxr5EO7ot_liQYOONcRlqJrn778Q1jxk8wBUZoM2Tnop7kczlW7Igg_BVDt1PDqYjeqTGPdpFTeqa-zC441dEft2Pvb6W7htfaY9HVBz0UfurOxXJ-CJx9kLE1gYlnDQpVf9vf3V7xpR_M4o"/>
 </div>
 <div class="flex flex-col gap-6">
-<h2 class="text-text-primary text-3xl font-bold leading-tight tracking-tight font-display md:text-4xl">Our Story</h2>
-<p class="text-text-primary text-base font-normal leading-relaxed">From our founding, KIM MEX has been driven by an unwavering commitment to excellence. Our journey is built on a foundation of integrity, quality craftsmanship, and a dedication to client satisfaction. We have grown from a small team to a leading contractor in Cambodia, shaping skylines and communities with projects that stand the test of time, always prioritizing the safety of our people and the quality of our work.</p>
-<div class="flex flex-col gap-4 mt-4">
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0 text-primary mt-1"><span class="material-symbols-outlined">shield</span></div>
-<div>
-<h3 class="text-text-primary text-lg font-bold">Quality &amp; Safety First</h3>
-<p class="text-text-muted text-sm">We adhere to the strictest safety and quality standards on every project.</p>
+<h2 class="font-display text-3xl font-bold text-secondary dark:text-white md:text-4xl">Our Story</h2>
+<p class="text-base text-secondary/80 dark:text-gray-400">Founded on the principles of integrity and excellence, KIM MEX has grown to become a leading contractor in Cambodia. Our journey is one of passion, dedication, and an unwavering commitment to delivering projects that not only meet but exceed expectations, building a stronger future for the communities we serve.</p>
+<div class="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">shield</span>
 </div>
+<span class="font-medium text-secondary dark:text-white">Quality &amp; Safety First</span>
 </div>
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0 text-primary mt-1"><span class="material-symbols-outlined">groups</span></div>
-<div>
-<h3 class="text-text-primary text-lg font-bold">Professional Team</h3>
-<p class="text-text-muted text-sm">Our team of certified engineers and skilled staff are our greatest asset.</p>
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">groups</span>
 </div>
+<span class="font-medium text-secondary dark:text-white">Professional Team</span>
 </div>
-<div class="flex items-start gap-4">
-<div class="flex-shrink-0 text-primary mt-1"><span class="material-symbols-outlined">timer</span></div>
-<div>
-<h3 class="text-text-primary text-lg font-bold">On-Time Delivery</h3>
-<p class="text-text-muted text-sm">We pride ourselves on completing projects efficiently and within schedule.</p>
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">timer</span>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Mission, Vision, Values -->
-<section class="py-16 md:py-24 bg-background">
-<div class="container mx-auto px-4 text-center">
-<h2 class="text-text-primary text-3xl font-bold leading-tight tracking-tight font-display md:text-4xl mb-12">Building Tomorrow with Integrity</h2>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow text-left">
-<div class="inline-block p-3 bg-primary/10 rounded-lg mb-4"><span class="material-symbols-outlined text-primary text-3xl">flag</span></div>
-<h3 class="text-text-primary text-xl font-bold mb-2">Our Mission</h3>
-<p class="text-text-muted">To deliver superior construction and design services through innovation, quality, and a commitment to our clients' vision, ensuring every project is a landmark of excellence.</p>
-</div>
-<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow text-left">
-<div class="inline-block p-3 bg-primary/10 rounded-lg mb-4"><span class="material-symbols-outlined text-primary text-3xl">visibility</span></div>
-<h3 class="text-text-primary text-xl font-bold mb-2">Our Vision</h3>
-<p class="text-text-muted">To be Cambodia's most trusted and sought-after construction partner, recognized for our integrity, innovation, and contribution to the nation's development.</p>
-</div>
-<div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow text-left">
-<div class="inline-block p-3 bg-primary/10 rounded-lg mb-4"><span class="material-symbols-outlined text-primary text-3xl">verified</span></div>
-<h3 class="text-text-primary text-xl font-bold mb-2">Our Values</h3>
-<p class="text-text-muted">Safety, Quality, Integrity, and Innovation are the pillars of our company. They guide our actions and define our character in every interaction and on every job site.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Experience Stats Band -->
-<section class="bg-primary text-white py-12 md:py-16">
-<div class="container mx-auto px-4">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-<div>
-<span class="material-symbols-outlined text-4xl mb-2">calendar_today</span>
-<p class="text-3xl md:text-4xl font-bold font-display">10+</p>
-<p class="text-gray-300">Years Experience</p>
-</div>
-<div>
-<span class="material-symbols-outlined text-4xl mb-2">foundation</span>
-<p class="text-3xl md:text-4xl font-bold font-display">120+</p>
-<p class="text-gray-300">Projects Completed</p>
-</div>
-<div>
-<span class="material-symbols-outlined text-4xl mb-2">engineering</span>
-<p class="text-3xl md:text-4xl font-bold font-display">30+</p>
-<p class="text-gray-300">Engineers &amp; Staff</p>
-</div>
-<div>
-<span class="material-symbols-outlined text-4xl mb-2">health_and_safety</span>
-<p class="text-3xl md:text-4xl font-bold font-display">100%</p>
-<p class="text-gray-300">Safety Compliance</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Milestones Timeline -->
-<section class="py-16 md:py-24 bg-white">
-<div class="container mx-auto px-4">
-<h2 class="text-center text-text-primary text-3xl font-bold leading-tight tracking-tight font-display md:text-4xl mb-16">Our Journey of Growth</h2>
-<div class="relative max-w-2xl mx-auto">
-<div class="absolute left-1/2 top-0 h-full w-0.5 bg-gray-200 transform -translate-x-1/2"></div>
-<div class="relative mt-8">
-<div class="flex items-center mb-8 w-full">
-<div class="w-1/2 pr-8 text-right">
-<p class="font-bold text-accent text-lg">2015</p>
-<p class="text-text-primary font-semibold">Company Founded</p>
-<p class="text-text-muted text-sm">KIM MEX established with a vision for quality construction.</p>
-</div>
-<div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white"></div>
-</div>
-<div class="flex items-center mb-8 w-full justify-end">
-<div class="w-1/2 pl-8 text-left">
-<p class="font-bold text-accent text-lg">2018</p>
-<p class="text-text-primary font-semibold">Commercial Projects Expansion</p>
-<p class="text-text-muted text-sm">Expanded services into large-scale commercial buildings.</p>
-</div>
-<div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white"></div>
-</div>
-<div class="flex items-center mb-8 w-full">
-<div class="w-1/2 pr-8 text-right">
-<p class="font-bold text-accent text-lg">2021</p>
-<p class="text-text-primary font-semibold">ISO Safety Program</p>
-<p class="text-text-muted text-sm">Achieved ISO certification for our safety management systems.</p>
-</div>
-<div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white"></div>
-</div>
-<div class="flex items-center w-full justify-end">
-<div class="w-1/2 pl-8 text-left">
-<p class="font-bold text-accent text-lg">2024</p>
-<p class="text-text-primary font-semibold">100th Project Delivered</p>
-<p class="text-text-muted text-sm">Celebrated a major milestone in our company's history.</p>
-</div>
-<div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white"></div>
+<span class="font-medium text-secondary dark:text-white">On-Time Delivery</span>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- Call to Action -->
-<section class="py-16 md:py-24 bg-background">
-<div class="container mx-auto px-4 text-center">
-<div class="max-w-3xl mx-auto">
-<h2 class="text-text-primary text-3xl font-bold leading-tight tracking-tight font-display md:text-4xl">Ready to build your next project with KIM MEX?</h2>
-<p class="text-text-muted mt-4 mb-8">Let's work together to bring your vision to life. Our team is ready to provide the expertise and quality your project deserves.</p>
-<div class="flex flex-wrap gap-4 justify-center">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity"><span class="truncate">Contact Us</span></button>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white text-text-primary border border-gray-300 text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-100 transition-colors"><span class="truncate">See Our Projects</span></button>
+<!-- Guiding Principles Section -->
+<section class="mx-auto max-w-[1200px] px-6 py-16 md:py-20">
+<div class="flex flex-col items-center gap-4 text-center">
+<h2 class="font-display text-3xl font-bold text-secondary dark:text-white md:text-4xl">Building Tomorrow with Integrity</h2>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-custom">
+<div class="text-primary">
+<span class="material-symbols-outlined !text-3xl">rocket_launch</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-display text-xl font-semibold text-secondary dark:text-white">Our Mission</h3>
+<p class="text-sm font-normal leading-relaxed text-secondary/80 dark:text-gray-400">
+                  To deliver superior construction and design solutions through innovation, quality, and unwavering commitment to client satisfaction.
+                </p>
 </div>
 </div>
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-custom">
+<div class="text-primary">
+<span class="material-symbols-outlined !text-3xl">visibility</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-display text-xl font-semibold text-secondary dark:text-white">Our Vision</h3>
+<p class="text-sm font-normal leading-relaxed text-secondary/80 dark:text-gray-400">
+                  To be the most trusted and sought-after construction partner in Cambodia, renowned for our excellence and integrity.
+                </p>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-custom">
+<div class="text-primary">
+<span class="material-symbols-outlined !text-3xl">verified_user</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-display text-xl font-semibold text-secondary dark:text-white">Our Values</h3>
+<p class="text-sm font-normal leading-relaxed text-secondary/80 dark:text-gray-400">
+                  We uphold integrity, professionalism, and collaboration in all our endeavors, fostering a culture of safety and respect.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Band -->
+<section class="bg-secondary py-16">
+<div class="mx-auto grid max-w-[1200px] grid-cols-2 gap-y-12 px-6 text-center text-white md:grid-cols-4">
+<div class="flex flex-col gap-1">
+<p class="font-display text-4xl font-bold">10+</p>
+<p class="text-sm text-white/70">Years Experience</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="font-display text-4xl font-bold">120+</p>
+<p class="text-sm text-white/70">Projects Completed</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="font-display text-4xl font-bold">30+</p>
+<p class="text-sm text-white/70">Engineers &amp; Staff</p>
+</div>
+<div class="flex flex-col gap-1">
+<p class="font-display text-4xl font-bold">100%</p>
+<p class="text-sm text-white/70">Safety Compliance</p>
+</div>
+</div>
+</section>
+<!-- Our Journey of Growth (Timeline) -->
+<section class="bg-card-light dark:bg-card-dark py-16 md:py-20">
+<div class="mx-auto max-w-[1200px] px-6">
+<div class="flex flex-col items-center gap-4 text-center">
+<h2 class="font-display text-3xl font-bold text-secondary dark:text-white md:text-4xl">Our Journey of Growth</h2>
+</div>
+<div class="relative mt-12 grid grid-cols-1 gap-x-12 lg:grid-cols-2">
+<div class="absolute left-0 top-0 h-full w-0.5 bg-border-light dark:bg-border-dark lg:left-1/2 lg:-translate-x-1/2"></div>
+<!-- 2015 -->
+<div class="relative mb-8 flex justify-end pr-8 lg:pr-12">
+<div class="absolute -left-2.5 top-1 z-10 h-6 w-6 rounded-full border-4 border-card-light dark:border-card-dark bg-primary lg:left-1/2 lg:-translate-x-1/2"></div>
+<div class="text-right">
+<h3 class="font-display text-2xl font-semibold text-secondary dark:text-white">2015</h3>
+<p class="mt-1 font-bold text-secondary dark:text-gray-300">Company Inception</p>
+<p class="mt-1 text-sm text-secondary/80 dark:text-gray-400">KIM MEX was founded with a vision to transform the construction landscape in Cambodia.</p>
+</div>
+</div>
+<div class="hidden lg:block"></div>
+<!-- 2018 -->
+<div class="hidden lg:block"></div>
+<div class="relative mb-8 flex justify-start pl-8 lg:pl-12">
+<div class="absolute -left-2.5 top-1 z-10 h-6 w-6 rounded-full border-4 border-card-light dark:border-card-dark bg-primary lg:left-1/2 lg:-translate-x-1/2"></div>
+<div>
+<h3 class="font-display text-2xl font-semibold text-secondary dark:text-white">2018</h3>
+<p class="mt-1 font-bold text-secondary dark:text-gray-300">First Major Project</p>
+<p class="mt-1 text-sm text-secondary/80 dark:text-gray-400">Successfully completed our first large-scale commercial building, setting a new benchmark for quality.</p>
+</div>
+</div>
+<!-- 2021 -->
+<div class="relative mb-8 flex justify-end pr-8 lg:pr-12">
+<div class="absolute -left-2.5 top-1 z-10 h-6 w-6 rounded-full border-4 border-card-light dark:border-card-dark bg-primary lg:left-1/2 lg:-translate-x-1/2"></div>
+<div class="text-right">
+<h3 class="font-display text-2xl font-semibold text-secondary dark:text-white">2021</h3>
+<p class="mt-1 font-bold text-secondary dark:text-gray-300">Team Expansion</p>
+<p class="mt-1 text-sm text-secondary/80 dark:text-gray-400">Expanded our team of skilled engineers and professionals to meet growing demand.</p>
+</div>
+</div>
+<div class="hidden lg:block"></div>
+<!-- 2024 -->
+<div class="hidden lg:block"></div>
+<div class="relative flex justify-start pl-8 lg:pl-12">
+<div class="absolute -left-2.5 top-1 z-10 h-6 w-6 rounded-full border-4 border-card-light dark:border-card-dark bg-primary lg:left-1/2 lg:-translate-x-1/2"></div>
+<div>
+<h3 class="font-display text-2xl font-semibold text-secondary dark:text-white">2024</h3>
+<p class="mt-1 font-bold text-secondary dark:text-gray-300">ISO Certification</p>
+<p class="mt-1 text-sm text-secondary/80 dark:text-gray-400">Achieved ISO 9001:2015 certification, affirming our commitment to international quality standards.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership Preview Section -->
+<section class="mx-auto max-w-[1200px] px-6 py-16 md:py-20">
+<div class="flex flex-col items-center gap-4 text-center">
+<h2 class="font-display text-3xl font-bold text-secondary dark:text-white md:text-4xl">Meet Our Leaders</h2>
+</div>
+<div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col items-center text-center rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-custom">
+<img class="h-32 w-32 rounded-full object-cover" data-alt="Portrait of a male CEO in a suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN6vO8NadmDe_3y6TSQ-SxRmk6ZmDipBXkYl8CSedfjN8N3jgmVmfRKyPGtG21gDt7G4QwL3_dilm4oouju9StV8YyVceDSyW8oU4drGhTHS3z_BQQ0nrfypUUqW0Bd0OWzyFbqPK2mOvk6O2XFKC9ErGR6RIHhAJaGtTHiGoKxl9o42HrFETSrN7g7g7Qing_sTbINGJNeabc4TrInu8XfEDGrF0U8MGqGNuKVtfgxcqON2D2O0plEoOIYShLV1q6pJER8PPOy78"/>
+<h3 class="mt-4 font-display text-xl font-semibold text-secondary dark:text-white">Johnathan Doe</h3>
+<p class="text-sm text-primary">Chief Executive Officer</p>
+<a class="mt-4 text-sm font-medium text-secondary/70 dark:text-gray-400 hover:text-primary" href="#">View Profile</a>
+</div>
+<div class="flex flex-col items-center text-center rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-custom">
+<img class="h-32 w-32 rounded-full object-cover" data-alt="Portrait of a female Deputy General Manager" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA74MAoVyd5i2e1rq9SsNtGZI-w1Q_iWUZnDOYkzlMd2YHNzN-PZiOUC2Fkr1Dd-aufeAgT8WL3c1LUKlyQrOAhUz8j1G90AJc2EjnWPj2HmwW2AFQHKCDmmipCzreooJW8HIZ9EyEKRD7pvIb-Yi1i8q522k0Byoc06Qr70QJIq92zSJr9Boa2teksTglcBzwy1W_tl82bRF0nutsXct94ei8dCVkSSt0puqOVw948IoujMxSe4ZObdx2hlGHI4YjgeHd06wvKvXI"/>
+<h3 class="mt-4 font-display text-xl font-semibold text-secondary dark:text-white">Jane Smith</h3>
+<p class="text-sm text-primary">Deputy General Manager</p>
+<a class="mt-4 text-sm font-medium text-secondary/70 dark:text-gray-400 hover:text-primary" href="#">View Profile</a>
+</div>
+<div class="flex flex-col items-center text-center rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-custom">
+<img class="h-32 w-32 rounded-full object-cover" data-alt="Portrait of a male Finance Director" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6lp8LSV5Pz4O7JTjNwHZNIaor1AK1v689sKbPc_vSq0b7ce4Yo2Ep8kN3X8IdqCvdv-5mrlA8evdEYtyHp9kMau91mgZrEaCGCTXPyCyqIsA9YVga5vAfzqdmI-siIzKAsGMaP-hsBpLIxaIdprUnSNsV8Ygs4GTR21SFRxUVQAsuaT89744OppRF2rilQ6tjbHDfIC9dva9hlsxYB39oEKIlSQ3CQxrfVqcppeLD8lTKb8HyOfmWyXWQoXn7xxCFpil6YrRcDN8"/>
+<h3 class="mt-4 font-display text-xl font-semibold text-secondary dark:text-white">Michael Chen</h3>
+<p class="text-sm text-primary">Finance Director</p>
+<a class="mt-4 text-sm font-medium text-secondary/70 dark:text-gray-400 hover:text-primary" href="#">View Profile</a>
+</div>
+</div>
+</section>
+<!-- CTA Footer -->
+<section class="flex flex-col items-center justify-center bg-cta-gradient p-10 py-20 text-center">
+<h2 class="font-display text-4xl font-bold text-white">Ready to build your next project with KIM MEX?</h2>
+<p class="mt-2 max-w-2xl text-lg text-white/80">Let's work together to bring your vision to life with precision and excellence.</p>
+<div class="mt-8 flex flex-wrap justify-center gap-4">
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-white text-secondary text-base font-bold leading-normal tracking-wide transition hover:opacity-90">
+<span class="truncate">Contact Us</span>
+</button>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-transparent text-white border border-white/50 text-base font-bold leading-normal tracking-wide transition hover:bg-white/10">
+<span class="truncate">See Our Projects</span>
+</button>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-primary text-white">
-<div class="container mx-auto px-4 py-16">
-<div class="grid md:grid-cols-4 gap-12">
-<div class="md:col-span-2">
-<div class="flex items-center gap-4 mb-4">
-<div class="size-6">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+<footer class="bg-secondary text-white">
+<div class="mx-auto max-w-[1200px] grid grid-cols-1 gap-12 px-6 py-16 md:grid-cols-2 lg:grid-cols-4">
+<div class="flex flex-col gap-4">
+<h3 class="font-display font-semibold">KIM MEX</h3>
+<p class="text-sm text-white/70">Building the future of Cambodia with integrity, quality, and precision since 2015.</p>
 </div>
-<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] font-display">KIM MEX</h2>
+<div class="flex flex-col gap-4">
+<h3 class="font-display font-semibold">Quick Links</h3>
+<a class="text-sm text-white/70 hover:text-white" href="#">About Us</a>
+<a class="text-sm text-white/70 hover:text-white" href="#">Services</a>
+<a class="text-sm text-white/70 hover:text-white" href="#">Projects</a>
+<a class="text-sm text-white/70 hover:text-white" href="#">Contact</a>
 </div>
-<p class="text-gray-300 text-sm max-w-md">Your trusted partner in construction and design, committed to building a stronger Cambodia with quality, safety, and integrity.</p>
+<div class="flex flex-col gap-4">
+<h3 class="font-display font-semibold">Contact Info</h3>
+<p class="text-sm text-white/70">Phnom Penh, Cambodia</p>
+<p class="text-sm text-white/70">info@kimmex.com</p>
+<p class="text-sm text-white/70">+855 12 345 678</p>
 </div>
-<div>
-<h3 class="font-bold mb-4 font-display">Quick Links</h3>
-<ul class="space-y-2 text-sm text-gray-300">
-<li><a class="hover:text-white" href="#">Home</a></li>
-<li><a class="hover:text-white" href="#">Projects</a></li>
-<li><a class="hover:text-white" href="#">About Us</a></li>
-<li><a class="hover:text-white" href="#">Contact</a></li>
-</ul>
-</div>
-<div>
-<h3 class="font-bold mb-4 font-display">Contact Us</h3>
-<ul class="space-y-2 text-sm text-gray-300">
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-base mt-0.5">location_on</span>
-<span>123 Construction Rd, Phnom Penh, Cambodia</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-base mt-0.5">call</span>
-<span>+855 12 345 678</span>
-</li>
-<li class="flex items-start gap-2">
-<span class="material-symbols-outlined text-base mt-0.5">email</span>
-<span>info@kimmex.com</span>
-</li>
-</ul>
+<div class="flex flex-col gap-4">
+<h3 class="font-display font-semibold">Follow Us</h3>
+<div class="flex gap-4">
+<a class="text-white/70 hover:text-white" href="#">Facebook</a>
+<a class="text-white/70 hover:text-white" href="#">LinkedIn</a>
+<a class="text-white/70 hover:text-white" href="#">Twitter</a>
 </div>
 </div>
-<div class="border-t border-white/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-<p>© 2024 KIM MEX Construction &amp; Design Co., Ltd. All Rights Reserved.</p>
-<div class="flex gap-4 mt-4 md:mt-0">
-<a class="hover:text-white" href="#">Facebook</a>
-<a class="hover:text-white" href="#">LinkedIn</a>
-<a class="hover:text-white" href="#">Twitter</a>
 </div>
-</div>
+<div class="border-t border-white/20 py-6 text-center">
+<p class="text-sm text-white/70">© 2024 KIM MEX Construction &amp; Design Co., Ltd. All Rights Reserved.</p>
 </div>
 </footer>
 </div>
