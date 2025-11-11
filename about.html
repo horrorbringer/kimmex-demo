@@ -43,6 +43,7 @@
         },
       },
     }
+
   </script>
 <style>
     body {
@@ -51,6 +52,21 @@
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Poppins', sans-serif;
     }
+
+        .active-link {
+            position: relative;
+            color: #0F172A;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            bottom: -8px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background-color: #E41E26;
+        }
   </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-body text-secondary dark:text-gray-300">
@@ -68,8 +84,8 @@
         </div>
     </a>
 <nav class="hidden lg:flex items-center gap-6">
-    <a class="relative text-sm font-semibold tracking-[0.01em] text-[#0F172A] active-link" href="index.html">Home</a>
-    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="about.html">About</a>
+    <a class="relative text-sm font-semibold tracking-[0.01em] text-[#0F172A] " href="index.html">Home</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A] active-link" href="about.html">About</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="service.html">Services</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="projects.html">Projects</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="news.html">News</a>
@@ -333,4 +349,31 @@
 </footer>
 </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.getElementById('navbar');
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const body = document.body;
+        // Scroll behavior
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 6px 20px rgba(15, 23, 42, 0.05)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+        // Mobile menu toggle
+        mobileMenuToggle.addEventListener('click', () => {
+            body.classList.toggle('nav-open');
+        });
+        // Close mobile menu on link click
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                body.classList.remove('nav-open');
+            });
+        });
+    });
+</script>
 </body></html>
