@@ -57,30 +57,40 @@
 <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
 <!-- TopNavBar -->
-<header class="sticky top-0 z-50 bg-card-light dark:bg-card-dark shadow-sm">
-<div class="mx-auto flex max-w-[1200px] items-center justify-between whitespace-nowrap px-6 py-4">
-<div class="flex items-center gap-4">
-<div class="size-6 text-secondary dark:text-white">
-<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
-</div>
-<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-secondary dark:text-white">KIM MEX</h2>
-</div>
-<nav class="hidden items-center gap-8 md:flex">
-<a class="text-sm font-medium leading-normal text-secondary/70 dark:text-gray-400 hover:text-secondary dark:hover:text-white" href="#">Home</a>
-<a class="relative text-sm font-medium leading-normal text-secondary dark:text-white" href="#">
-              About
-              <span class="absolute -bottom-2 left-0 w-full h-0.5 bg-primary"></span>
-</a>
-<a class="text-sm font-medium leading-normal text-secondary/70 dark:text-gray-400 hover:text-secondary dark:hover:text-white" href="#">Services</a>
-<a class="text-sm font-medium leading-normal text-secondary/70 dark:text-gray-400 hover:text-secondary dark:hover:text-white" href="#">Projects</a>
-<a class="text-sm font-medium leading-normal text-secondary/70 dark:text-gray-400 hover:text-secondary dark:hover:text-white" href="#">News</a>
-<a class="text-sm font-medium leading-normal text-secondary/70 dark:text-gray-400 hover:text-secondary dark:hover:text-white" href="#">Contact</a>
+ <header class="sticky top-0 z-50 w-full bg-[#F5F7FA] transition-shadow duration-300" id="navbar">
+<div class="container mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6">
+    <a href="index.html">
+        <div class="flex items-center justify-center gap-4 text-primary dark:text-white">
+            <div class="size-12 flex items-center">
+                <img src="image/kimmex-logo.png" alt="kimmex">
+            </div>
+            <h2 class="text-text-main text-lg font-heading font-bold tracking-tight">KIM MEX</h2>
+        </div>
+    </a>
+<nav class="hidden lg:flex items-center gap-6">
+    <a class="relative text-sm font-semibold tracking-[0.01em] text-[#0F172A] active-link" href="index.html">Home</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="about.html">About</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="service.html">Services</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="projects.html">Projects</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="news.html">News</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="contact.html">Contact</a>
 </nav>
-<button class="md:hidden text-secondary dark:text-white">
-<span class="material-symbols-outlined">menu</span>
+<div class="flex items-center lg:hidden">
+<button class="p-2 text-[#0F172A]" id="mobile-menu-toggle">
+<span class="material-symbols-outlined hamburger-icon">menu</span>
+<span class="material-symbols-outlined close-icon">close</span>
 </button>
+</div>
+</div>
+<div class="mobile-menu hidden w-full bg-white lg:hidden" id="mobile-menu">
+<div class="flex flex-col p-5">
+<a class="block w-full border-b border-gray-200 py-3 text-base font-semibold text-[#0F172A]" href="#">Home</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">About</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">Services</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">Projects</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">News</a>
+<a class="block w-full py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">Contact</a>
+</div>
 </div>
 </header>
 <main class="flex-1">
