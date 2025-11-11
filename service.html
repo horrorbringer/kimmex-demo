@@ -44,6 +44,58 @@
             height: 3px;
             background-color: #E41E26;
         }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-scroll {
+            animation: scroll 25s linear infinite;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient-animation 15s ease infinite;
+        }
+        .group:hover .group-hover-pause {
+            animation-play-state: paused;
+        }
+        .active-link {
+            position: relative;
+            color: #0F172A;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            bottom: -8px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background-color: #E41E26;
+        }
+        .parallax {
+            background-attachment: fixed;
+        }
+        .nav-open .mobile-menu {
+            display: block;
+        }
+        .nav-open .hamburger-icon {
+            display: none;
+        }
+        .nav-open .close-icon {
+            display: block;
+        }
+        .close-icon {
+            display: none;
+        }
+        .text-text-main{
+            color: #111827;
+        }
     </style>
 <script id="tailwind-config">
       tailwind.config = {
@@ -93,9 +145,9 @@
         </div>
     </a>
 <nav class="hidden lg:flex items-center gap-6">
-    <a class="relative text-sm font-semibold tracking-[0.01em] text-[#0F172A] active-link" href="index.html">Home</a>
+    <a class="relative text-sm font-semibold tracking-[0.01em] text-[#0F172A] " href="index.html">Home</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="about.html">About</a>
-    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="service.html">Services</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A] active-link" href="service.html">Services</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="projects.html">Projects</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="news.html">News</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="contact.html">Contact</a>
