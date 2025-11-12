@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 
 <html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About Us - KIM MEX Construction &amp; Design Co., Ltd.</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<script id="tailwind-config">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About Us - KIM MEX Construction &amp; Design Co., Ltd.</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- icon -->
+    <link rel = "icon" href = "./image/kimmex-logo.ico" sizes="32x32">
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Poppins:wght@600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+    <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
@@ -444,54 +448,54 @@
         <p>© 2025 KIM MEX Construction &amp; Design Co., Ltd. All rights reserved.</p>
         </div>
         </div>
-  </footer>
-  <a class="fixed bottom-5 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#E41E26] text-white shadow-lg transition-opacity hover:opacity-80" href="#">
-    <span class="material-symbols-outlined">arrow_upward</span>
-  </a>
+        </footer>
+        <a class="fixed bottom-5 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#E41E26] text-white shadow-lg transition-opacity hover:opacity-80" href="#">
+            <span class="material-symbols-outlined">arrow_upward</span>
+        </a>
     </div>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const navbar = document.getElementById('navbar');
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const body = document.body;
-        
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 30) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-        
-        // Mobile menu toggle with smooth animation
-        mobileMenuToggle.addEventListener('click', () => {
-            body.classList.toggle('nav-open');
-            mobileMenu.classList.toggle('hidden');
-            // Smooth animation
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.style.animation = 'slideDown 0.3s ease-out';
-            }
-        });
-        
-        // Close mobile menu on link click
-        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                body.classList.remove('nav-open');
-                mobileMenu.classList.add('hidden');
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const body = document.body;
+            
+            // Navbar scroll effect
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // Mobile menu toggle with smooth animation
+            mobileMenuToggle.addEventListener('click', () => {
+                body.classList.toggle('nav-open');
+                mobileMenu.classList.toggle('hidden');
+                // Smooth animation
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.style.animation = 'slideDown 0.3s ease-out';
+                }
+            });
+            
+            // Close mobile menu on link click
+            const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    body.classList.remove('nav-open');
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navbar.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                    body.classList.remove('nav-open');
+                    mobileMenu.classList.add('hidden');
+                }
             });
         });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navbar.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
-                body.classList.remove('nav-open');
-                mobileMenu.classList.add('hidden');
-            }
-        });
-    });
-</script>
-</body>
+    </script>
+    </body>
 </html>
