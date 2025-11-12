@@ -6,7 +6,8 @@
 <title>Projects | KIM MEX Construction &amp; Design</title>
 <meta content="Explore KIM MEX construction projects across Cambodia — residential, commercial, industrial, and renovation works built with precision and quality." name="description"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link rel = "icon" type = "image/png" href = "./image/kimmex-logo.png">
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Poppins:wght@700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
@@ -44,6 +45,21 @@
 <style>
         .font-display { font-family: 'Poppins', sans-serif; }
         .font-body { font-family: 'Inter', sans-serif; }
+
+        .active-link {
+            position: relative;
+            color: #0F172A;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            bottom: -8px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background-color: #E41E26;
+        }
 
         @keyframes scroll {
             0% { transform: translateX(0); }
@@ -101,7 +117,7 @@
 <body class="bg-background-light dark:bg-background-dark font-body text-text-light dark:text-text-dark">
 <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
 <!-- TopNavBar -->
-<header class="sticky top-0 z-50 w-full bg-[#F5F7FA] transition-shadow duration-300" id="navbar">
+ <header class="sticky top-0 z-50 w-full bg-[#F5F7FA] transition-shadow duration-300" id="navbar">
 <div class="container mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6">
     <a href="index.html">
         <div class="flex items-center justify-center gap-4 text-primary dark:text-white">
@@ -112,10 +128,10 @@
         </div>
     </a>
 <nav class="hidden lg:flex items-center gap-6">
-    <a class="relative text-sm font-semibold tracking-[0.01em] text-[#0F172A] active-link" href="index.html">Home</a>
+    <a class="relative text-sm font-semibold tracking-[0.01em] text-[#0F172A] " href="index.html">Home</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="about.html">About</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="service.html">Services</a>
-    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="projects.html">Projects</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A] active-link" href="projects.html">Projects</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="news.html">News</a>
     <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="contact.html">Contact</a>
 </nav>
@@ -128,15 +144,15 @@
 </div>
 <div class="mobile-menu hidden w-full bg-white lg:hidden" id="mobile-menu">
 <div class="flex flex-col p-5">
-<a class="block w-full border-b border-gray-200 py-3 text-base font-semibold text-[#0F172A]" href="index.html">Home</a>
-<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="about.html">About</a>
-<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="service.html">Services</a>
-<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="projects.html">Projects</a>
-<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="news.html">News</a>
-<a class="block w-full py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="contact.html">Contact</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-semibold text-[#0F172A]" href="#">Home</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">About</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">Services</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">Projects</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">News</a>
+<a class="block w-full py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">Contact</a>
 </div>
 </div>
-</header> 
+</header>
 <main>
 <!-- HeroSection -->
 <section class="relative">
@@ -191,7 +207,7 @@
 </div>
 </div>
 <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View Details</button>
+<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 view-details-button">View Details</button>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-xl shadow-lg">
@@ -202,7 +218,7 @@
 </div>
 </div>
 <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View Details</button>
+<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 view-details-button view-details-button">View Details</button>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-xl shadow-lg">
@@ -213,7 +229,7 @@
 </div>
 </div>
 <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View Details</button>
+<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 view-details-button">View Details</button>
 </div>
 </div>
 <div class="group relative overflow-hidden rounded-xl shadow-lg">
@@ -224,7 +240,7 @@
 </div>
 </div>
 <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">View Details</button>
+<button class="flex items-center justify-center rounded-full h-12 px-6 bg-accent text-white text-sm font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 view-details-button">View Details</button>
 </div>
 </div>
 </div>
@@ -340,6 +356,24 @@
     <span class="material-symbols-outlined">arrow_upward</span>
   </a>
 </div>
+<script>
+  // JavaScript for mobile menu toggle can be added here
+  // when click button view details it navigate to project details page
+  const viewDetailsButtons = document.querySelectorAll('.view-details-button');
+  viewDetailsButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      window.location.href = "./project-details.html";
+    });
+  });
+
+  // remove event listener from non existing class
+  viewDetailsButtons.forEach(button => {
+    button.removeEventListener('click', () => {
+      window.location.href = "./project-details.html";
+    });
+  });
+
+</script>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -367,4 +401,5 @@
         });
     });
 </script>
-</body></html>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Service Details - KIM MEX Construction &amp; Design</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-scroll {
+            animation: scroll 25s linear infinite;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient-animation 15s ease infinite;
+        }
+        .group:hover .group-hover-pause {
+            animation-play-state: paused;
+        }
+        .active-link {
+            position: relative;
+            color: #0F172A;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            bottom: -8px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 3px;
+            background-color: #E41E26;
+        }
+        .parallax {
+            background-attachment: fixed;
+        }
+        .nav-open .mobile-menu {
+            display: block;
+        }
+        .nav-open .hamburger-icon {
+            display: none;
+        }
+        .nav-open .close-icon {
+            display: block;
+        }
+        .close-icon {
+            display: none;
+        }
+        .text-text-main{
+            color: #111827;
+        }
+    </style>
+</head>
+<body class="bg-[#F8FAFC]">
+<div class="relative flex min-h-screen w-full flex-col font-display">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full bg-[#F5F7FA] transition-shadow duration-300" id="navbar">
+<div class="container mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6">
+    <a href="index.html">
+        <div class="flex items-center justify-center gap-4 text-primary dark:text-white">
+            <div class="size-12 flex items-center">
+                <img src="image/kimmex-logo.png" alt="kimmex">
+            </div>
+            <h2 class="text-text-main text-lg font-heading font-bold tracking-tight">KIM MEX</h2>
+        </div>
+    </a>
+<nav class="hidden lg:flex items-center gap-6">
+    <a class="relative text-sm font-semibold tracking-[0.01em] text-[#0F172A] active-link" href="index.html">Home</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="about.html">About</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="service.html">Services</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="projects.html">Projects</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="news.html">News</a>
+    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center lg:hidden">
+<button class="p-2 text-[#0F172A]" id="mobile-menu-toggle">
+<span class="material-symbols-outlined hamburger-icon">menu</span>
+<span class="material-symbols-outlined close-icon">close</span>
+</button>
+</div>
+</div>
+<div class="mobile-menu hidden w-full bg-white lg:hidden" id="mobile-menu">
+<div class="flex flex-col p-5">
+<a class="block w-full border-b border-gray-200 py-3 text-base font-semibold text-[#0F172A]" href="index.html">Home</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="about.html">About</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="service.html">Services</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="projects.html">Projects</a>
+<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="news.html">News</a>
+<a class="block w-full py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="contact.html">Contact</a>
+</div>
+</div>
+</header> 
+<main>
+<!-- HeroSection -->
+<section class="flex h-[420px] w-full flex-col items-center justify-center rounded-b-[24px] bg-cover bg-center bg-no-repeat px-6" data-alt="Wide shot of a modern building under construction at dusk." style='background-image: linear-gradient(rgba(26,35,126,0.7), rgba(26,35,126,0.3)), url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&amp;w=2070&amp;auto=format&amp;fit=crop");'>
+<div class="flex flex-col items-center gap-4 text-center">
+<h1 class="text-4xl font-bold text-white md:text-5xl">General Construction</h1>
+<p class="max-w-xl text-base text-white">Delivering full-scale building solutions from foundation to finishing.</p>
+</div>
+<div class="mt-8 flex flex-wrap justify-center gap-4">
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-[14px] bg-[#E41E26] px-6 text-sm font-bold text-white transition-colors hover:bg-red-700">
+<span>Request a Quote</span>
+</button>
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-[14px] border border-white bg-transparent px-6 text-sm font-bold text-white transition-colors hover:bg-white hover:text-[#1A237E]">
+<span>View Projects</span>
+</button>
+</div>
+</section>
+<!-- Intro Overview -->
+<section class="flex justify-center px-6 py-20">
+<div class="grid w-full max-w-[1200px] items-center gap-12 md:grid-cols-2 lg:gap-16">
+<div class="overflow-hidden rounded-[18px]">
+<img alt="Two architects reviewing blueprints on a construction site." class="h-full w-full object-cover transition-transform duration-300 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWMLjKkjHlqqr-YZ5VJ720phP4OBNxFJS-4P1loDH3hEBS4QeFZzobRXonDOCjAwALQinMQhC4A4oKxiTCxIFSKtAIRCIwG6n8dLVi3w59cwEI1CTjeH6pVP2jh9X7Ii6gw1rDUVEX6JRDDMQaXOyq7iWaoHQrDKPflRL_ptN3pgI1-LZjMnlgv02n8Wu4S92ZKuv8WbN7QHv0iWHysih1xRqgE_By2TvRipIjAlhBTPD0EaAEmBknzvKftmH70gtbchyoklwSgho"/>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-display text-sm font-bold uppercase tracking-wider text-[#E41E26]">Our Service</p>
+<h2 class="text-3xl font-bold text-[#0F172A] md:text-4xl">Comprehensive Construction Solutions</h2>
+<p class="text-base text-slate-600">Our primary goal is to deliver exceptional construction services with unwavering reliability. We adhere to the highest international standards, ensuring every project meets ISO quality benchmarks from start to finish.</p>
+<div class="mt-4 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#1A237E]">foundation</span>
+<span class="font-medium text-[#0F172A]">Quality &amp; Safety First</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#1A237E]">engineering</span>
+<span class="font-medium text-[#0F172A]">Professional Team</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#1A237E]">timer</span>
+<span class="font-medium text-[#0F172A]">On-Time Delivery</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Scope of Work -->
+<section class="flex justify-center bg-white px-6 py-20">
+<div class="w-full max-w-[1200px]">
+<h2 class="mb-12 text-center text-3xl font-bold text-[#0F172A]">Our Scope of Work</h2>
+<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+<div class="flex flex-col gap-4 rounded-[18px] border border-[#E5E7EB] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#E41E26] hover:shadow-lg">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-[#EEF2FF]">
+<span class="material-symbols-outlined text-[#1A237E]">design_services</span>
+</div>
+<h3 class="text-lg font-bold text-[#0F172A]">Pre-construction Planning</h3>
+<p class="text-sm text-slate-600">Detailed planning and analysis to ensure a solid foundation for your project.</p>
+</div>
+<div class="flex flex-col gap-4 rounded-[18px] border border-[#E5E7EB] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#E41E26] hover:shadow-lg">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-[#EEF2FF]">
+<span class="material-symbols-outlined text-[#1A237E]">construction</span>
+</div>
+<h3 class="text-lg font-bold text-[#0F172A]">Structural &amp; Architectural</h3>
+<p class="text-sm text-slate-600">Executing the core construction and design elements with precision and care.</p>
+</div>
+<div class="flex flex-col gap-4 rounded-[18px] border border-[#E5E7EB] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#E41E26] hover:shadow-lg">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-[#EEF2FF]">
+<span class="material-symbols-outlined text-[#1A237E]">electrical_services</span>
+</div>
+<h3 class="text-lg font-bold text-[#0F172A]">MEP Systems</h3>
+<p class="text-sm text-slate-600">Installation and management of Mechanical, Electrical, and Plumbing systems.</p>
+</div>
+<div class="flex flex-col gap-4 rounded-[18px] border border-[#E5E7EB] bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#E41E26] hover:shadow-lg">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-[#EEF2FF]">
+<span class="material-symbols-outlined text-[#1A237E]">health_and_safety</span>
+</div>
+<h3 class="text-lg font-bold text-[#0F172A]">Quality &amp; Safety Assurance</h3>
+<p class="text-sm text-slate-600">Continuous monitoring to guarantee the highest standards of safety and quality.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Timeline -->
+<section class="flex justify-center px-6 py-20">
+<div class="w-full max-w-[1200px]">
+<h2 class="mb-16 text-center text-3xl font-bold text-[#0F172A]">How We Deliver</h2>
+<div class="relative flex flex-col items-center md:flex-row md:justify-between">
+<!-- Connecting Line -->
+<div class="absolute left-1/2 top-0 z-0 h-full w-0.5 -translate-x-1/2 bg-[#E5E7EB] md:left-0 md:top-1/2 md:h-0.5 md:w-full md:translate-x-0 md:-translate-y-1/2"></div>
+<!-- Step 1 -->
+<div class="relative z-10 mb-12 flex w-full flex-row items-center md:mb-0 md:w-auto md:flex-col">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E41E26] text-white">1</div>
+<div class="ml-4 rounded-lg bg-white p-3 shadow-sm md:ml-0 md:mt-4">
+<p class="font-semibold">Consultation</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 mb-12 flex w-full flex-row items-center md:mb-0 md:w-auto md:flex-col">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E41E26] text-white">2</div>
+<div class="ml-4 rounded-lg bg-white p-3 shadow-sm md:ml-0 md:mt-4">
+<p class="font-semibold">Design &amp; Planning</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 mb-12 flex w-full flex-row items-center md:mb-0 md:w-auto md:flex-col">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E41E26] text-white">3</div>
+<div class="ml-4 rounded-lg bg-white p-3 shadow-sm md:ml-0 md:mt-4">
+<p class="font-semibold">Construction</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 mb-12 flex w-full flex-row items-center md:mb-0 md:w-auto md:flex-col">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E41E26] text-white">4</div>
+<div class="ml-4 rounded-lg bg-white p-3 shadow-sm md:ml-0 md:mt-4">
+<p class="font-semibold">Inspection</p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="relative z-10 flex w-full flex-row items-center md:w-auto md:flex-col">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E41E26] text-white">5</div>
+<div class="ml-4 rounded-lg bg-white p-3 shadow-sm md:ml-0 md:mt-4">
+<p class="font-semibold">Handover</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Projects -->
+<section class="flex justify-center bg-white px-6 py-20">
+<div class="w-full max-w-[1200px]">
+<h2 class="mb-12 text-center text-3xl font-bold text-[#0F172A]">Projects Built with This Service</h2>
+<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div class="group relative overflow-hidden rounded-[18px] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+<img class="h-96 w-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Modern commercial building with glass facade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbVrvBur5Er_ItNdDlrdjxKzcSXNboTD10g1M-WQbv19VW0aGZ_eD82hYLqSH6kxBo9_9Zno5KLTxY2y99I6KVFhN0y2b21YMNi0m70pNSLKPwB_vPsB_fuuWDiec77uAbap_d97cpgBeAqMSX4fbyAG9zaNVRbFSl5FHfDEzzlJg0w5G0d1COlFqp0KRISAUtNhGCmMlstg0wODRKfPIznfeArZKqo95GLLD9xiK7k0BEE0d3VYzHIhqGXyUG1ClddnCkcTN1X6Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="text-xl font-bold text-white">Corporate HQ Tower</h3>
+<p class="text-sm text-slate-200">Phnom Penh / 24 Months</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-[18px] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+<img class="h-96 w-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Luxurious residential villa with a swimming pool." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7M_yZ4FBSq4_-2HrNjYxbEUXiY38-OufcCkm1ZqBvLOcSUDY-z5zNYgzJlro8uZ2_loYGPFPBJ-wM6eqILTUJ-77WQpPYx_Ss3Z5JHcdgzvxq9a-wQuYTN_C-T-bPP1YddLtfGz_quDyRC557edBPy8APDEzH4UClUP1P7Mmoo1Uqhkn5IGx39-YRM36kwKA1iK9s6IDTD-won8SieIQbu_KoCFc19HoDnNNzI219ANczDs4_uJtfE2GW1zxqQSIMtUuYkwmI-bE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="text-xl font-bold text-white">Riverside Luxury Villas</h3>
+<p class="text-sm text-slate-200">Siem Reap / 18 Months</p>
+</div>
+</div>
+<div class="group relative overflow-hidden rounded-[18px] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+<img class="h-96 w-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Interior of a large, modern industrial warehouse." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdj3rRfFAT1nKARl8xHkLIDXzfYEYSShIVElESdnMh9x-ImBpRJp3LPfgnJwUcUq1PN4Clz9JE5Rsdu80p_DxBt9i0yRjAjmUJ68IrKgqKEbrfRFU_bsbw3pH0tJVdtDyVHK_kOaYOA-KjWS7zzne_t61Z-VEMVtxDr5lfv-Sxzi9Jjo2-K7fnSoOzVvg5Uo_4K7965J2IRfGwbOKEtlq0m2rxBQQBCk3tal-1IyJsk9vWT_LgwjO5DLx0AL6FtPMxF5QMz5HOuJ8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="text-xl font-bold text-white">National Logistics Hub</h3>
+<p class="text-sm text-slate-200">Sihanoukville / 36 Months</p>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-[14px] bg-[#1A237E] px-6 text-sm font-bold text-white transition-colors hover:bg-indigo-900 mx-auto">
+<span>View All Projects</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Key Stats -->
+<section class="flex justify-center px-6 py-20">
+<div class="w-full max-w-[1200px]">
+<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+<div class="flex flex-col items-center gap-3 rounded-[18px] bg-white p-8 text-center shadow-sm">
+<span class="material-symbols-outlined text-4xl text-[#1A237E]">apartment</span>
+<p class="text-4xl font-bold text-[#0F172A]">120+</p>
+<p class="text-sm text-slate-600">Projects Completed</p>
+</div>
+<div class="flex flex-col items-center gap-3 rounded-[18px] bg-white p-8 text-center shadow-sm">
+<span class="material-symbols-outlined text-4xl text-[#1A237E]">calendar_today</span>
+<p class="text-4xl font-bold text-[#0F172A]">10+</p>
+<p class="text-sm text-slate-600">Years Experience</p>
+</div>
+<div class="flex flex-col items-center gap-3 rounded-[18px] bg-white p-8 text-center shadow-sm">
+<span class="material-symbols-outlined text-4xl text-[#1A237E]">groups</span>
+<p class="text-4xl font-bold text-[#0F172A]">30+</p>
+<p class="text-sm text-slate-600">Engineers &amp; Architects</p>
+</div>
+<div class="flex flex-col items-center gap-3 rounded-[18px] bg-white p-8 text-center shadow-sm">
+<span class="material-symbols-outlined text-4xl text-[#1A237E]">verified_user</span>
+<p class="text-4xl font-bold text-[#0F172A]">100%</p>
+<p class="text-sm text-slate-600">Safety Compliance</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Footer -->
+<section class="flex min-h-[360px] items-center justify-center bg-gradient-to-r from-[#1A237E] via-[#5C2E85] to-[#E41E26] px-6 py-16">
+<div class="flex flex-col items-center gap-6 text-center">
+<h2 class="max-w-2xl text-3xl font-bold text-white md:text-4xl">Ready to start your next project with KIM MEX?</h2>
+<div class="mt-4 flex flex-wrap justify-center gap-4">
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-[14px] bg-white px-6 text-sm font-bold text-[#1A237E] transition-opacity hover:opacity-90">
+<span>Request a Quote</span>
+</button>
+<button class="flex h-12 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-[14px] border border-white bg-transparent px-6 text-sm font-bold text-white transition-colors hover:bg-white/10">
+<span>Contact Us</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+  <footer class="w-full bg-[#1A237E] text-white pt-16">
+    <div class="container mx-auto max-w-[1200px] px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div class="flex flex-col gap-4">
+    <div class="flex items-center gap-4">
+        <div class="size-20 text-white flex items-center">
+            <img src="image/kimmex-logo.png" alt="kimmex">
+        </div>
+    <h2 class="text-white text-xl font-bold">KIM MEX</h2>
+    </div>
+    <p class="text-white/70 text-sm">Your trusted partner in construction, architecture, and engineering in Cambodia.</p>
+    </div>
+    <div class="flex flex-col gap-4">
+    <h3 class="font-bold text-white">Quick Links</h3>
+    <div class="flex flex-col gap-2 text-sm text-white/70">
+    <a class="hover:text-white transition-colors" href="#">Home</a>
+    <a class="hover:text-white transition-colors" href="#">About</a>
+    <a class="hover:text-white transition-colors" href="#">Services</a>
+    <a class="hover:text-white transition-colors" href="#">Projects</a>
+    <a class="hover:text-white transition-colors" href="#">News</a>
+    <a class="hover:text-white transition-colors" href="#">Contact</a>
+    </div>
+    </div>
+    <div class="flex flex-col gap-4">
+    <h3 class="font-bold text-white">Contact Info</h3>
+    <div class="flex flex-col gap-2 text-sm text-white/70">
+    <p>123 Construction Rd, Phnom Penh, Cambodia</p>
+    <p>contact@kimmex.com</p>
+    <p>+855 12 345 678</p>
+    </div>
+    </div>
+    <div class="flex flex-col gap-4">
+    <h3 class="font-bold text-white">Follow Us</h3>
+    <div class="flex items-center gap-4">
+    <a class="text-white/70 hover:text-[#E41E26] transition-colors" href="#">
+    <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+    </a>
+    <a class="text-white/70 hover:text-[#E41E26] transition-colors" href="#">
+    <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+    </a>
+    </div>
+    </div>
+    </div>
+    <div class="mt-16 border-t border-white/10 py-8 text-center text-sm text-white/70">
+    <p>© 2025 KIM MEX Construction &amp; Design Co., Ltd. All rights reserved.</p>
+    </div>
+    </div>
+  </footer>
+  <a class="fixed bottom-5 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#E41E26] text-white shadow-lg transition-opacity hover:opacity-80" href="#">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </a>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navbar = document.getElementById('navbar');
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const body = document.body;
+        // Scroll behavior
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.style.boxShadow = '0 6px 20px rgba(15, 23, 42, 0.05)';
+            } else {
+                navbar.style.boxShadow = 'none';
+            }
+        });
+        // Mobile menu toggle
+        mobileMenuToggle.addEventListener('click', () => {
+            body.classList.toggle('nav-open');
+        });
+        // Close mobile menu on link click
+        const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                body.classList.remove('nav-open');
+            });
+        });
+    });
+</script>
+</body></html>
