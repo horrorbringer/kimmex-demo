@@ -14,39 +14,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 
     <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#E41E26", // Red accent
-            "secondary": "#0F172A", // Dark Slate for text and dark bg
-            "background-light": "#F5F7FA",
-            "background-dark": "#101222",
-            "card-light": "#FFFFFF",
-            "card-dark": "#1a1c2c",
-            "border-light": "#E5E7EB",
-            "border-dark": "#33364a",
-          },
-          fontFamily: {
-            "display": ["Poppins", "sans-serif"],
-            "body": ["Inter", "sans-serif"],
-          },
-          borderRadius: {
-            "DEFAULT": "18px",
-            "lg": "18px",
-            "xl": "18px",
-            "full": "9999px"
-          },
-          boxShadow: {
-            'custom': '0 10px 30px rgba(2, 6, 23, 0.08)',
-          },
-          backgroundImage: {
-            'cta-gradient': 'linear-gradient(to top, #6d28d9, #be185d)',
-          }
+        tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+            colors: {
+                "primary": "#E41E26", // Red accent
+                "accent": "#E41E26",
+                "secondary": "#0F172A", // Dark Slate for text and dark bg
+                "background-light": "#F5F7FA",
+                "background-dark": "#101222",
+                "card-light": "#FFFFFF",
+                "card-dark": "#1a1c2c",
+                "border-light": "#E5E7EB",
+                "border-dark": "#33364a",
+            },
+            fontFamily: {
+                "display": ["Poppins", "sans-serif"],
+                "body": ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+                "DEFAULT": "18px",
+                "lg": "18px",
+                "xl": "18px",
+                "full": "9999px"
+            },
+            boxShadow: {
+                'custom': '0 10px 30px rgba(2, 6, 23, 0.08)',
+            },
+            backgroundImage: {
+                'cta-gradient': 'linear-gradient(to top, #6d28d9, #be185d)',
+            }
+            },
         },
-      },
-    }
+        }
 
   </script>
 <style>
@@ -453,6 +454,7 @@
             <span class="material-symbols-outlined">arrow_upward</span>
         </a>
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navbar = document.getElementById('navbar');

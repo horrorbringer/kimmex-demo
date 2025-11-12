@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 
 <html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Service Details - KIM MEX Construction &amp; Design</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Service Details - KIM MEX Construction &amp; Design</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
     <link rel = "icon" href = "./image/kimmex-logo.ico" sizes="32x32">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                "primary": "#1A237E",
+                "accent": "#E41E26",
+                "background-light": "#F8FAFC",
+                "background-dark": "#111827",
+                "surface": "#FFFFFF",
+                "text-main": "#111827",
+                "text-muted": "#9AA3AF",
+                "line": "#E5E7EB",
+                "highlight": "#EEF2FF",
+                },
+                fontFamily: {
+                "display": ["Inter", "sans-serif"],
+                "heading": ["Poppins", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+            },
+            },
+        }
+    </script>
+    <style>
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -17,48 +44,56 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        .nav-link {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2.5px;
-            background-color: #E41E26;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
+      .nav-link {
+          position: relative;
+          overflow: hidden;
+          font-weight: 500;
+          transition: all 0.3s ease;
+      }
+      .nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 0;
+          height: 2.5px;
+          background-color: #E41E26;
+          transition: width 0.3s ease;
+      }
+      .nav-link:hover {
+          color: #0F172A;
+      }
+      .nav-link:hover::after {
+          width: 100%;
+      }
+      .active-link {
+          position: relative;
+          color: #0F172A;
+          font-weight: 600;
+      }
+      
+      /* Navbar scroll effect */
+      #navbar.scrolled {
+          box-shadow: 0 4px 20px rgba(26, 35, 126, 0.08);
+          background-color: rgba(245, 247, 250, 0.95);
+          backdrop-filter: blur(8px);
+      }
+      
+      /* Mobile menu animation */
+      @keyframes slideDown {
+          from {
+              opacity: 0;
+              transform: translateY(-10px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
         .active-link {
+            position: relative;
             color: #0F172A;
-            font-weight: 600;
-        }
-        .active-link::after {
-            width: 100%;
-        }
-        #navbar.scrolled {
-            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.08);
-            background-color: rgba(245, 247, 250, 0.95);
-            backdrop-filter: blur(8px);
-        }
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .mobile-menu {
-            animation: slideDown 0.3s ease;
         }
 
         @keyframes scroll {
@@ -80,8 +115,38 @@
         .group:hover .group-hover-pause {
             animation-play-state: paused;
         }
+        .active-link {
+            position: relative;
+            color: #0F172A;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background-color: #E41E26;
+            transition: width 0.3s ease;
+        }
+        .active-link::after {
+            width: 100%;
+        }
         .parallax {
             background-attachment: fixed;
+        }
+        .nav-open .mobile-menu {
+            display: block;
+        }
+        .nav-open .hamburger-icon {
+            display: none;
+        }
+        .nav-open .close-icon {
+            display: block;
+        }
+        .close-icon {
+            display: none;
         }
         .text-text-main{
             color: #111827;
@@ -118,9 +183,9 @@
 </div>
 <div class="mobile-menu hidden w-full bg-white lg:hidden" id="mobile-menu">
 <div class="container mx-auto max-w-[1200px] flex flex-col px-6 py-4">
-<a class="block w-full py-4 text-base font-medium text-[#0F172A]" href="index.html">Home</a>
+<a class="block w-full py-4 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="index.html">Home</a>
 <a class="block w-full py-4 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="about.html">About</a>
-<a class="block w-full py-4 text-base font-medium text-[#0F172A]" href="service.html">Services</a>
+<a class="block w-full py-4 text-base text-accent font-medium text-[#0F172A]" href="service.html">Services</a>
 <a class="block w-full py-4 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="projects.html">Projects</a>
 <a class="block w-full py-4 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="news.html">News</a>
 <a class="block w-full py-4 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="contact.html">Contact</a>
