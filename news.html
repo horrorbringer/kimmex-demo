@@ -154,7 +154,7 @@
     </script>
 </head>
 <body class="bg-background-light text-text-charcoal">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="relative w-full">
 <!-- 1. TopNavBar -->
 <header class="sticky top-0 z-50 w-full bg-[#F5F7FA] transition-all duration-300" id="navbar">
     <div class="container mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6">
@@ -192,126 +192,146 @@
 </header> 
 <main class="flex flex-col">
 <!-- 2. HeaderImage (Hero Section) -->
-<section class="relative bg-cover bg-center flex flex-col justify-center items-center text-center text-white min-h-[480px] py-20 md:py-32" data-alt="A modern construction site at dusk with architectural lighting" style='background-image: linear-gradient(0deg, rgba(26, 35, 126, 0.7) 0%, rgba(26, 35, 126, 0.5) 100%), url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");'>
-    <div class="mx-auto max-w-3xl px-6">
-        <h1 class="font-heading text-4xl font-bold leading-tight md:text-6xl">Latest News &amp; Insights</h1>
-        <p class="mt-4 max-w-xl mx-auto text-lg leading-relaxed text-gray-200">Stay updated with KIM MEX’s construction projects, innovations, and achievements.</p>
+<section class="relative bg-cover bg-center flex flex-col justify-center items-center text-center text-white min-h-[520px] py-20 md:py-40" data-alt="A modern construction site at dusk with architectural lighting" style='background-image: linear-gradient(135deg, rgba(26, 35, 126, 0.75) 0%, rgba(228, 30, 38, 0.3) 100%), url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");'>
+    <div class="mx-auto max-w-4xl px-6 flex flex-col gap-6">
+        <h1 class="font-heading text-5xl md:text-6xl font-bold leading-tight tracking-tight">Latest News &amp; Insights</h1>
+        <p class="text-lg md:text-xl leading-relaxed text-gray-100 max-w-2xl mx-auto">Stay updated with KIM MEX's construction projects, innovations, and industry-leading achievements.</p>
     </div>
 </section>
 <!-- 3. Chips (Filter Bar) & 4. ImageGrid (News Grid Section) -->
-<section class="mx-auto w-full max-w-[1200px] px-4 py-10 md:px-6 md:py-16">
-    <div class="flex flex-wrap justify-center gap-3 mb-10">
-        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-transparent bg-accent px-5 text-sm font-medium text-white">All</button>
-        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-line-gray bg-background-surface px-5 text-sm font-medium text-text-charcoal hover:bg-highlight-blue hover:border-primary/50">Company News</button>
-        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-line-gray bg-background-surface px-5 text-sm font-medium text-text-charcoal hover:bg-highlight-blue hover:border-primary/50">Projects</button>
-        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-line-gray bg-background-surface px-5 text-sm font-medium text-text-charcoal hover:bg-highlight-blue hover:border-primary/50">Safety</button>
-        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full border border-line-gray bg-background-surface px-5 text-sm font-medium text-text-charcoal hover:bg-highlight-blue hover:border-primary/50">Design Trends</button>
+<section class="mx-auto w-full max-w-[1200px] px-4 py-16 md:px-6 md:py-24">
+    <div class="flex flex-wrap justify-center gap-2 mb-12 md:mb-16">
+        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-md border border-transparent bg-primary px-5 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition-all duration-300">All</button>
+        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-md border border-line-gray bg-background-surface px-5 text-sm font-medium text-text-charcoal hover:border-primary hover:bg-highlight-blue transition-all duration-300">Company News</button>
+        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-md border border-line-gray bg-background-surface px-5 text-sm font-medium text-text-charcoal hover:border-primary hover:bg-highlight-blue transition-all duration-300">Projects</button>
+        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-md border border-line-gray bg-background-surface px-5 text-sm font-medium text-text-charcoal hover:border-primary hover:bg-highlight-blue transition-all duration-300">Safety</button>
+        <button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-md border border-line-gray bg-background-surface px-5 text-sm font-medium text-text-charcoal hover:border-primary hover:bg-highlight-blue transition-all duration-300">Design Trends</button>
     </div>
-<div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-    <div class="flex flex-col gap-4 rounded-xl border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-250 hover:-translate-y-1.5 hover:border-accent hover:shadow-lg">
-        <div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden" data-alt="Construction workers in hard hats reviewing blueprints on a tablet" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5PDwdIUNUSAh0XptcEWcbhRGtDDFwzWsQ2TXkNq_2y_SFy1bJ11My4jo6_KAYozvgSEYvP6uPP5V8Y8EWTwcLrjmTHVJ6nJyVJBZjRE_GhAO3-sielpnM3ARifU6ipGoTuLmd65Q5puE79HOyPecOVdg6XrlQikAxtRQvgWnYKiIEKtPoNBYF5iNfmHz8miX_Na0KIWeP5gEYOtimqDDM1lKKoTlBsVrrIDrVmwv9tEs3C7CfUY_HrOsq9vive2YMNxHhtIYooAg");'></div>
-        <div class="flex flex-col gap-2">
+<!-- Featured Card -->
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="lg:col-span-2 flex flex-col gap-6 rounded-xl border border-line-gray bg-background-surface p-7 shadow-custom transition-all duration-300 hover:shadow-lg overflow-hidden group">
+        <div class="w-full bg-center bg-no-repeat aspect-[16/9] lg:aspect-[20/9] bg-cover rounded-lg overflow-hidden relative" data-alt="Construction workers in hard hats reviewing blueprints on a tablet" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5PDwdIUNUSAh0XptcEWcbhRGtDDFwzWsQ2TXkNq_2y_SFy1bJ11My4jo6_KAYozvgSEYvP6uPP5V8Y8EWTwcLrjmTHVJ6nJyVJBZjRE_GhAO3-sielpnM3ARifU6ipGoTuLmd65Q5puE79HOyPecOVdg6XrlQikAxtRQvgWnYKiIEKtPoNBYF5iNfmHz8miX_Na0KIWeP5gEYOtimqDDM1lKKoTlBsVrrIDrVmwv9tEs3C7CfUY_HrOsq9vive2YMNxHhtIYooAg");'>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent group-hover:from-black/60 transition-all duration-300"></div>
+            <span class="absolute top-3 right-3 bg-accent px-3 py-1.5 text-white text-xs font-bold rounded-md">FEATURED</span>
+        </div>
+        <div class="flex flex-col gap-4">
         <div class="flex items-center gap-3 text-xs font-medium">
         <span class="text-text-muted">Oct 26, 2023</span>
-        <span class="rounded-full bg-highlight-blue px-2.5 py-1 text-primary">Projects</span>
+        <span class="bg-primary/5 px-2.5 py-1 text-primary font-medium text-xs rounded-md">Projects</span>
         </div>
-        <h3 class="font-heading text-lg font-bold text-text-charcoal">Major Project Milestone Achieved in Phnom Penh</h3>
-        <p class="text-sm text-text-muted">Our team has successfully completed the foundational phase of the new commercial tower, setting a new record for efficiency.</p>
-        <a class="mt-2 text-sm font-bold text-accent" href="news-details.html">Read More →</a>
+        <h3 class="font-heading text-2xl lg:text-2xl font-bold text-text-charcoal leading-snug">Major Project Milestone Achieved in Phnom Penh</h3>
+        <p class="text-sm text-text-muted leading-relaxed">Our team has successfully completed the foundational phase of the new commercial tower, setting a new record for efficiency and excellence in construction management.</p>
+        <a class="mt-1 text-sm font-semibold text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1">Read Full Story <span>→</span></a>
         </div>
     </div>
-<div class="flex flex-col gap-4 rounded-xl border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-250 hover:-translate-y-1.5 hover:border-accent hover:shadow-lg">
-<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden" data-alt="A safety inspector wearing a yellow vest at a construction site" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5cDAUTSxml1uHEgql5YaNjIwjK9F-txJ_O8RvTxecnCZPUAnvUMuj7FHhLdYOfokRUBPsrAskxF5357FwQntyQSLobBc8w9Tb7ZWKLT420up1GGbbGiU0mNtk7w1RseZn8-Nu5mw25RtnuYACMNyVB0-apvylIqZRgH0ONXFJXh4i76UKvc-2kpkYlQTud-OQqRdvrwgO8TI2dM2H7pjEhfPpFckY0hyWAb39U5j2MKV2eqkd-Dqwh7mTdKSGeFTnNMT-3n98eHw");'></div>
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-3 text-xs font-medium">
-<span class="text-text-muted">Oct 15, 2023</span>
-<span class="rounded-full bg-highlight-blue px-2.5 py-1 text-primary">Safety</span>
+    <!-- Regular Cards Grid -->
+    <div class="flex flex-col gap-5 rounded-lg border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-300 hover:shadow-lg overflow-hidden group">
+        <div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden relative" data-alt="A safety inspector wearing a yellow vest at a construction site" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5cDAUTSxml1uHEgql5YaNjIwjK9F-txJ_O8RvTxecnCZPUAnvUMuj7FHhLdYOfokRUBPsrAskxF5357FwQntyQSLobBc8w9Tb7ZWKLT420up1GGbbGiU0mNtk7w1RseZn8-Nu5mw25RtnuYACMNyVB0-apvylIqZRgH0ONXFJXh4i76UKvc-2kpkYlQTud-OQqRdvrwgO8TI2dM2H7pjEhfPpFckY0hyWAb39U5j2MKV2eqkd-Dqwh7mTdKSGeFTnNMT-3n98eHw");'>
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
+        </div>
+        <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-3 text-xs font-medium">
+        <span class="text-text-muted">Oct 15, 2023</span>
+        <span class="bg-primary/5 px-2 py-0.5 text-primary font-medium text-xs rounded-md">Safety</span>
+        </div>
+        <h3 class="font-heading text-base font-bold text-text-charcoal line-clamp-2">KIM MEX Wins National Safety Excellence Award</h3>
+        <p class="text-sm text-text-muted leading-relaxed line-clamp-2">We are proud to be recognized for our unwavering commitment to workplace safety and best practices in the industry.</p>
+        <a class="mt-1 text-sm font-semibold text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1">Read More <span>→</span></a>
+        </div>
+    </div>
+    <div class="flex flex-col gap-5 rounded-lg border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-300 hover:shadow-lg overflow-hidden group">
+        <div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden relative" data-alt="An architect's desk with sustainable building material samples" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzkkPotQ-wMGpDAn-T3eJ-BPWc1GFAyhhy4pAhsyBQ6zf0aJWre1fQpAxD_OlTX-zbKLnVjfv_qLwB5R7YuX-6ZB-cWFf8EU75qmcXSovKM_5oI9jGaZ4234ExKPhDl9Z9doR6VPBT1G4RxmvZ8AzGmfkFCfGtGpInXz--kmDl65sImcwxWHNclpjJmXhMceeKi0MmRSp9t6yPBC3msFwsA9eT94_IWa5cEk-M_5N3RZsjOB-Yv39ww5J77YHrZjoEpRZIzgJx9z8");'>
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
+        </div>
+        <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-3 text-xs font-medium">
+        <span class="text-text-muted">Sep 28, 2023</span>
+        <span class="bg-primary/5 px-2 py-0.5 text-primary font-medium text-xs rounded-md">Design Trends</span>
+        </div>
+        <h3 class="font-heading text-base font-bold text-text-charcoal line-clamp-2">Sustainable Design: Our 2024 Commitment</h3>
+        <p class="text-sm text-text-muted leading-relaxed line-clamp-2">Explore how we're integrating eco-friendly materials and energy-efficient designs into our latest projects.</p>
+        <a class="mt-1 text-sm font-semibold text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1">Read More <span>→</span></a>
+        </div>
+    </div>
 </div>
-<h3 class="font-heading text-lg font-bold text-text-charcoal">KIM MEX Wins National Safety Excellence Award</h3>
-<p class="text-sm text-text-muted">We are proud to be recognized for our unwavering commitment to workplace safety and best practices in the industry.</p>
-<a class="mt-2 text-sm font-bold text-accent" href="news-details.html">Read More →</a>
-</div>
-</div>
-<div class="flex flex-col gap-4 rounded-xl border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-250 hover:-translate-y-1.5 hover:border-accent hover:shadow-lg">
-<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden" data-alt="An architect's desk with sustainable building material samples" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzkkPotQ-wMGpDAn-T3eJ-BPWc1GFAyhhy4pAhsyBQ6zf0aJWre1fQpAxD_OlTX-zbKLnVjfv_qLwB5R7YuX-6ZB-cWFf8EU75qmcXSovKM_5oI9jGaZ4234ExKPhDl9Z9doR6VPBT1G4RxmvZ8AzGmfkFCfGtGpInXz--kmDl65sImcwxWHNclpjJmXhMceeKi0MmRSp9t6yPBC3msFwsA9eT94_IWa5cEk-M_5N3RZsjOB-Yv39ww5J77YHrZjoEpRZIzgJx9z8");'></div>
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-3 text-xs font-medium">
-<span class="text-text-muted">Sep 28, 2023</span>
-<span class="rounded-full bg-highlight-blue px-2.5 py-1 text-primary">Design Trends</span>
-</div>
-<h3 class="font-heading text-lg font-bold text-text-charcoal">Sustainable Design: Our 2024 Commitment</h3>
-<p class="text-sm text-text-muted">Explore how we're integrating eco-friendly materials and energy-efficient designs into our latest projects.</p>
-<a class="mt-2 text-sm font-bold text-accent" href="news-details.html">Read More →</a>
-</div>
-</div>
-<div class="flex flex-col gap-4 rounded-xl border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-250 hover:-translate-y-1.5 hover:border-accent hover:shadow-lg">
-<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden" data-alt="Business professionals shaking hands in a modern office" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwBtfaDMpdAjVWRf1DQt1bvd-34FVa1K2T31-rB90aAdykaZvxguONpMJzXw7dPrOiQfGWrWKZ6hs8GvJN4dSeuhnWSbO6P3INOTej4TimYE3MUS99DBiRCVaRyyvLRu9Io6qMhgTQwLllKL-FjOv2gE94cwnX_ruUISfGml2hD12I04LOH5pTEOPZU3MXiZlc1wDBET4P8D8-zlBNeIPAgajxoK0_mdp2T1LBt5LNQ-SqSYNJpX7s5Wjb5rmlRtG14kovEIj8UtA");'></div>
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-3 text-xs font-medium">
-<span class="text-text-muted">Sep 12, 2023</span>
-<span class="rounded-full bg-highlight-blue px-2.5 py-1 text-primary">Company News</span>
-</div>
-<h3 class="font-heading text-lg font-bold text-text-charcoal">New Partnership to Innovate Urban Development</h3>
-<p class="text-sm text-text-muted">Announcing our collaboration with leading tech firms to bring smart building solutions to Cambodia.</p>
-<a class="mt-2 text-sm font-bold text-accent" href="news-details.html">Read More →</a>
-</div>
-</div>
-<div class="flex flex-col gap-4 rounded-xl border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-250 hover:-translate-y-1.5 hover:border-accent hover:shadow-lg">
-<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden" data-alt="A groundbreaking ceremony with officials in hard hats and shovels" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzBZ4LVKDLPMRpOvUyGtfLtStwJdVrGa-3minIWoqkf5jcfOCX6UDdRb5W-qPEAxrk3Uw7etxwWnWX9XbrGkpCXfdKjcusc_YzPQNbtUXtTqOsTjg0LM9p6opXKohCaQShyMx1XNGAQ2x2HL_68cwHtgzxc1dLzpvRWCQoaPAaAMl2ygFE6W8DpJoqwioAlVckB0G1adp8kXVGjnXwDg0AnaOfuU5U4bjajlLxWGAvRZuReXeTMHewlXgxpcnTCx-0nCsazYMSt1w");'></div>
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-3 text-xs font-medium">
-<span class="text-text-muted">Aug 22, 2023</span>
-<span class="rounded-full bg-highlight-blue px-2.5 py-1 text-primary">Projects</span>
-</div>
-<h3 class="font-heading text-lg font-bold text-text-charcoal">Groundbreaking Ceremony for Riverside Complex</h3>
-<p class="text-sm text-text-muted">We officially broke ground on the highly anticipated Riverside mixed-use development this morning.</p>
-<a class="mt-2 text-sm font-bold text-accent" href="news-details.html">Read More →</a>
-</div>
-</div>
-<div class="flex flex-col gap-4 rounded-xl border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-250 hover:-translate-y-1.5 hover:border-accent hover:shadow-lg">
-<div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden" data-alt="A 3D architectural rendering on a computer screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdhnvd7kCSnYSJJp2Rm7V5MWL7DikU5tRkiR9H6s7oFTlOiJKBhu5AlaAyXs8QCegT0QKvR_Lg4dncmDu6uv28t3JUEqkDIe1KD6wfWGrG2LZ57kaaURBYzdZ3Lo3-bMv4SUQTLXAi0VGmXUpvrUGt8Sc6OahC7hh9jQnZKMxkM53lDTjWvo3DcbP--vp4cQjtH1J37fNzCzHUG87pPvfLg3SAQVBrMdcAA9UfG4iVw9cGEVldV2z5pkczJH8I6iMqCU78eHmgpvo");'></div>
-<div class="flex flex-col gap-2">
-<div class="flex items-center gap-3 text-xs font-medium">
-<span class="text-text-muted">Aug 05, 2023</span>
-<span class="rounded-full bg-highlight-blue px-2.5 py-1 text-primary">Design Trends</span>
-</div>
-<h3 class="font-heading text-lg font-bold text-text-charcoal">The Future of Architectural Visualization</h3>
-<p class="text-sm text-text-muted">Discover the cutting-edge tech our design team is using to bring client visions to life.</p>
-<a class="mt-2 text-sm font-bold text-accent" href="news-details.html">Read More →</a>
-</div>
-</div>
+
+<!-- Secondary Cards Grid -->
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="flex flex-col gap-5 rounded-lg border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-300 hover:shadow-lg overflow-hidden group">
+        <div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden relative" data-alt="Business professionals shaking hands in a modern office" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwBtfaDMpdAjVWRf1DQt1bvd-34FVa1K2T31-rB90aAdykaZvxguONpMJzXw7dPrOiQfGWrWKZ6hs8GvJN4dSeuhnWSbO6P3INOTej4TimYE3MUS99DBiRCVaRyyvLRu9Io6qMhgTQwLllKL-FjOv2gE94cwnX_ruUISfGml2hD12I04LOH5pTEOPZU3MXiZlc1wDBET4P8D8-zlBNeIPAgajxoK0_mdp2T1LBt5LNQ-SqSYNJpX7s5Wjb5rmlRtG14kovEIj8UtA");'>
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
+        </div>
+        <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-3 text-xs font-medium">
+        <span class="text-text-muted">Sep 12, 2023</span>
+        <span class="bg-primary/5 px-2 py-0.5 text-primary font-medium text-xs rounded-md">Company News</span>
+        </div>
+        <h3 class="font-heading text-base font-bold text-text-charcoal line-clamp-2">New Partnership to Innovate Urban Development</h3>
+        <p class="text-sm text-text-muted leading-relaxed line-clamp-2">Announcing our collaboration with leading tech firms to bring smart building solutions to Cambodia.</p>
+        <a class="mt-1 text-sm font-semibold text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1">Read More <span>→</span></a>
+        </div>
+    </div>
+    <div class="flex flex-col gap-5 rounded-lg border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-300 hover:shadow-lg overflow-hidden group">
+        <div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden relative" data-alt="A groundbreaking ceremony with officials in hard hats and shovels" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzBZ4LVKDLPMRpOvUyGtfLtStwJdVrGa-3minIWoqkf5jcfOCX6UDdRb5W-qPEAxrk3Uw7etxwWnWX9XbrGkpCXfdKjcusc_YzPQNbtUXtTqOsTjg0LM9p6opXKohCaQShyMx1XNGAQ2x2HL_68cwHtgzxc1dLzpvRWCQoaPAaAMl2ygFE6W8DpJoqwioAlVckB0G1adp8kXVGjnXwDg0AnaOfuU5U4bjajlLxWGAvRZuReXeTMHewlXgxpcnTCx-0nCsazYMSt1w");'>
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
+        </div>
+        <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-3 text-xs font-medium">
+        <span class="text-text-muted">Aug 22, 2023</span>
+        <span class="bg-primary/5 px-2 py-0.5 text-primary font-medium text-xs rounded-md">Projects</span>
+        </div>
+        <h3 class="font-heading text-base font-bold text-text-charcoal line-clamp-2">Groundbreaking Ceremony for Riverside Complex</h3>
+        <p class="text-sm text-text-muted leading-relaxed line-clamp-2">We officially broke ground on the highly anticipated Riverside mixed-use development this morning.</p>
+        <a class="mt-1 text-sm font-semibold text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1">Read More <span>→</span></a>
+        </div>
+    </div>
+    <div class="flex flex-col gap-5 rounded-lg border border-line-gray bg-background-surface p-5 shadow-custom transition-all duration-300 hover:shadow-lg overflow-hidden group">
+        <div class="w-full bg-center bg-no-repeat aspect-[16/9] bg-cover rounded-lg overflow-hidden relative" data-alt="A 3D architectural rendering on a computer screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdhnvd7kCSnYSJJp2Rm7V5MWL7DikU5tRkiR9H6s7oFTlOiJKBhu5AlaAyXs8QCegT0QKvR_Lg4dncmDu6uv28t3JUEqkDIe1KD6wfWGrG2LZ57kaaURBYzdZ3Lo3-bMv4SUQTLXAi0VGmXUpvrUGt8Sc6OahC7hh9jQnZKMxkM53lDTjWvo3DcbP--vp4cQjtH1J37fNzCzHUG87pPvfLg3SAQVBrMdcAA9UfG4iVw9cGEVldV2z5pkczJH8I6iMqCU78eHmgpvo");'>
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
+        </div>
+        <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-3 text-xs font-medium">
+        <span class="text-text-muted">Aug 05, 2023</span>
+        <span class="bg-primary/5 px-2 py-0.5 text-primary font-medium text-xs rounded-md">Design Trends</span>
+        </div>
+        <h3 class="font-heading text-base font-bold text-text-charcoal line-clamp-2">The Future of Architectural Visualization</h3>
+        <p class="text-sm text-text-muted leading-relaxed line-clamp-2">Discover the cutting-edge tech our design team is using to bring client visions to life.</p>
+        <a class="mt-1 text-sm font-semibold text-accent hover:text-accent/80 transition-colors inline-flex items-center gap-1">Read More <span>→</span></a>
+        </div>
+    </div>
 </div>
 <!-- 7. Pagination -->
-<nav aria-label="Pagination" class="mt-14 flex items-center justify-center gap-2">
-<a class="flex h-10 w-10 items-center justify-center rounded-lg text-text-muted hover:bg-highlight-blue" href="#">
-<span class="material-symbols-outlined text-xl"> chevron_left </span>
+<nav aria-label="Pagination" class="mt-16 flex items-center justify-center gap-1">
+<a class="flex h-10 w-10 items-center justify-center rounded-md text-text-muted hover:bg-highlight-blue hover:text-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
 </a>
-<a class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-sm font-bold text-white" href="#">1</a>
-<a class="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-medium text-text-muted hover:bg-highlight-blue" href="#">2</a>
-<a class="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-medium text-text-muted hover:bg-highlight-blue" href="#">3</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-md bg-primary text-sm font-semibold text-white hover:bg-primary/90 transition-all duration-300" href="#">1</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-md text-sm font-medium text-text-muted hover:bg-highlight-blue hover:text-primary transition-all duration-300" href="#">2</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-md text-sm font-medium text-text-muted hover:bg-highlight-blue hover:text-primary transition-all duration-300" href="#">3</a>
 <span class="flex h-10 w-10 items-center justify-center text-sm font-medium text-text-muted">...</span>
-<a class="flex h-10 w-10 items-center justify-center rounded-lg text-sm font-medium text-text-muted hover:bg-highlight-blue" href="#">8</a>
-<a class="flex h-10 w-10 items-center justify-center rounded-lg text-text-muted hover:bg-highlight-blue" href="#">
-<span class="material-symbols-outlined text-xl"> chevron_right </span>
+<a class="flex h-10 w-10 items-center justify-center rounded-md text-sm font-medium text-text-muted hover:bg-highlight-blue hover:text-primary transition-all duration-300" href="#">8</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-md text-text-muted hover:bg-highlight-blue hover:text-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
 </a>
 </nav>
 </section>
 <!-- 8. Newsletter Sign-Up Section -->
-<section class="bg-background-soft py-14 md:py-20">
+<section class="bg-background-soft py-16 md:py-24">
 <div class="mx-auto max-w-[1200px] px-6 text-center">
-<h2 class="font-heading text-3xl font-bold text-text-charcoal">Stay Connected with KIM MEX Updates</h2>
-<p class="mx-auto mt-2 max-w-2xl text-base text-text-muted">Get construction insights and company news delivered to your inbox.</p>
-<form class="mx-auto mt-8 flex max-w-lg flex-col items-center gap-3 sm:flex-row">
-<input class="h-12 w-full flex-1 rounded-lg border-line-gray px-4 text-sm focus:border-primary focus:ring-primary" placeholder="Enter your email address" type="email"/>
-<button class="h-12 w-full shrink-0 rounded-lg bg-gradient-to-r from-primary to-accent px-6 text-sm font-bold text-white sm:w-auto" type="submit">Subscribe</button>
+<h2 class="font-heading text-4xl font-bold text-text-charcoal">Stay Connected</h2>
+<p class="mx-auto mt-3 max-w-2xl text-base text-text-muted">Get construction insights and company news delivered to your inbox.</p>
+<form class="mx-auto mt-8 flex max-w-lg flex-col items-center gap-2 sm:flex-row">
+<input class="h-11 w-full flex-1 rounded-md border border-line-gray bg-white px-4 text-sm placeholder-text-muted focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300" placeholder="Enter your email" type="email"/>
+<button class="h-11 w-full shrink-0 rounded-md bg-primary px-6 text-sm font-semibold text-white hover:bg-primary/90 transition-all duration-300 sm:w-auto" type="submit">Subscribe</button>
 </form>
 </div>
 </section>
 <!-- 9. CTA Footer Banner -->
-<section class="bg-gradient-to-r from-primary to-primary-dark py-14 md:py-20 text-white">
+<section class="bg-primary py-16 md:py-24 text-white">
 <div class="mx-auto max-w-[1200px] px-6 text-center">
-<h2 class="font-heading text-3xl font-bold">Building Cambodia’s Future, One Project at a Time.</h2>
-<button class="mt-6 h-12 rounded-lg bg-accent px-8 text-sm font-bold text-white hover:opacity-90">Contact Us</button>
+<h2 class="font-heading text-4xl font-bold">Ready to Work Together?</h2>
+<p class="mx-auto mt-3 max-w-2xl text-base text-white/80">Let's discuss how we can bring your construction vision to life.</p>
+<button class="mt-8 h-11 rounded-md bg-white text-primary px-8 text-sm font-semibold hover:bg-gray-50 transition-all duration-300">Contact Us Today</button>
 </div>
 </section>
 </main>
