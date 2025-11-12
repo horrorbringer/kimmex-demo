@@ -96,16 +96,6 @@
             position: relative;
             color: #0F172A;
         }
-        .active-link::after {
-            content: '';
-            position: absolute;
-            bottom: -8px; 
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 3px;
-            background-color: #E41E26;
-        }
         .parallax {
             background-attachment: fixed;
         }
@@ -143,9 +133,9 @@
       <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="index.html">Home</a>
       <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="about.html">About</a>
       <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="service.html">Services</a>
-      <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="projects.html">Projects</a>
-      <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="news.html">News</a>
-      <a class="nav-link active-link text-sm text-[#0F172A]" href="contact.html">Contact</a>
+      <a class="nav-link text-sm text-[#0F172A] active-link" href="projects.html">Projects</a>
+      <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A] " href="news.html">News</a>
+      <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="contact.html">Contact</a>
   </nav>
   <div class="flex items-center lg:hidden">
   <button class="p-2 text-[#0F172A] hover:bg-gray-100 rounded-lg transition-colors" id="mobile-menu-toggle">

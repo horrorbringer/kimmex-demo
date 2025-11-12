@@ -53,13 +53,7 @@
             font-weight: 600;
         }
         .active-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
             width: 100%;
-            height: 2.5px;
-            background-color: #E41E26;
         }
         
         /* Navbar scroll effect */
@@ -103,16 +97,6 @@
             position: relative;
             color: #0F172A;
         }
-        .active-link::after {
-            content: '';
-            position: absolute;
-            bottom: -8px; 
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 3px;
-            background-color: #E41E26;
-        }
         .parallax {
             background-attachment: fixed;
         }
@@ -135,39 +119,40 @@
 </head>
 <body class="bg-[#F8FAFC] text-[#111827] font-display">
 <div class="relative w-full">
+    <!-- navigation -->
 <header class="sticky top-0 z-50 w-full bg-[#F5F7FA] transition-all duration-300" id="navbar">
-<div class="container mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6">
-    <a href="index.html" class="flex items-center justify-center gap-3 text-primary dark:text-white hover:opacity-80 transition-opacity">
-        <div class="size-12 flex items-center flex-shrink-0">
-            <img src="image/kimmex-logo.png" alt="kimmex" class="w-full h-full object-contain">
+    <div class="container mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6">
+        <a href="index.html" class="flex items-center justify-center gap-3 text-primary dark:text-white hover:opacity-80 transition-opacity">
+            <div class="size-12 flex items-center flex-shrink-0">
+                <img src="image/kimmex-logo.png" alt="kimmex" class="w-full h-full object-contain">
+            </div>
+            <h2 class="text-text-main text-lg font-heading font-bold tracking-tight hidden sm:block">KIM MEX</h2>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+            <a class="nav-link active-link text-sm text-[#0F172A]" href="index.html">Home</a>
+            <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="about.html">About</a>
+            <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="service.html">Services</a>
+            <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="projects.html">Projects</a>
+            <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="news.html">News</a>
+            <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="contact.html">Contact</a>
+        </nav>
+        <div class="flex items-center lg:hidden">
+            <button class="p-2 text-[#0F172A] hover:bg-gray-100 rounded-lg transition-colors" id="mobile-menu-toggle">
+                <span class="material-symbols-outlined hamburger-icon text-2xl">menu</span>
+                <span class="material-symbols-outlined close-icon text-2xl">close</span>
+            </button>
         </div>
-        <h2 class="text-text-main text-lg font-heading font-bold tracking-tight hidden sm:block">KIM MEX</h2>
-    </a>
-<nav class="hidden lg:flex items-center gap-8">
-    <a class="nav-link active-link text-sm text-[#0F172A]" href="index.html">Home</a>
-    <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="about.html">About</a>
-    <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="service.html">Services</a>
-    <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="projects.html">Projects</a>
-    <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="news.html">News</a>
-    <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="contact.html">Contact</a>
-</nav>
-<div class="flex items-center lg:hidden">
-<button class="p-2 text-[#0F172A] hover:bg-gray-100 rounded-lg transition-colors" id="mobile-menu-toggle">
-<span class="material-symbols-outlined hamburger-icon text-2xl">menu</span>
-<span class="material-symbols-outlined close-icon text-2xl">close</span>
-</button>
-</div>
-</div>
-<div class="mobile-menu hidden w-full bg-white lg:hidden border-t border-gray-200" id="mobile-menu">
-<div class="container mx-auto max-w-[1200px] px-6 flex flex-col">
-<a class="block py-4 text-base font-medium text-[#0F172A] border-b border-gray-100 hover:text-accent transition-colors" href="index.html">Home</a>
-<a class="block py-4 text-base font-medium text-[#64748B] border-b border-gray-100 hover:text-[#0F172A] hover:text-accent transition-colors" href="about.html">About</a>
-<a class="block py-4 text-base font-medium text-[#64748B] border-b border-gray-100 hover:text-[#0F172A] hover:text-accent transition-colors" href="service.html">Services</a>
-<a class="block py-4 text-base font-medium text-[#64748B] border-b border-gray-100 hover:text-[#0F172A] hover:text-accent transition-colors" href="projects.html">Projects</a>
-<a class="block py-4 text-base font-medium text-[#64748B] border-b border-gray-100 hover:text-[#0F172A] hover:text-accent transition-colors" href="news.html">News</a>
-<a class="block py-4 text-base font-medium text-[#64748B] hover:text-[#0F172A] hover:text-accent transition-colors" href="contact.html">Contact</a>
-</div>
-</div>
+    </div>
+    <div class="mobile-menu hidden w-full bg-white lg:hidden border-t border-gray-200" id="mobile-menu">
+        <div class="container mx-auto max-w-[1200px] px-6 flex flex-col">
+            <a class="block py-4 text-base font-medium text-[#0F172A] border-b border-gray-100 hover:text-accent transition-colors" href="index.html">Home</a>
+            <a class="block py-4 text-base font-medium text-[#64748B] border-b border-gray-100 hover:text-[#0F172A] hover:text-accent transition-colors" href="about.html">About</a>
+            <a class="block py-4 text-base font-medium text-[#64748B] border-b border-gray-100 hover:text-[#0F172A] hover:text-accent transition-colors" href="service.html">Services</a>
+            <a class="block py-4 text-base font-medium text-[#64748B] border-b border-gray-100 hover:text-[#0F172A] hover:text-accent transition-colors" href="projects.html">Projects</a>
+            <a class="block py-4 text-base font-medium text-[#64748B] border-b border-gray-100 hover:text-[#0F172A] hover:text-accent transition-colors" href="news.html">News</a>
+            <a class="block py-4 text-base font-medium text-[#64748B] hover:text-[#0F172A] hover:text-accent transition-colors" href="contact.html">Contact</a>
+        </div>
+    </div>
 </header> 
   <main class="flex flex-col">
   <section class="parallax relative flex min-h-[calc(100vh-80px)] w-full items-center justify-center bg-cover bg-center bg-no-repeat text-white" style='background-image: linear-gradient(rgba(26, 35, 126, 0.7) 0%, rgba(26, 35, 126, 0.3) 100%), url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&amp;w=2070&amp;auto=format&amp;fit=crop");'>

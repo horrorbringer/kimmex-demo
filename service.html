@@ -57,15 +57,6 @@
           color: #0F172A;
           font-weight: 600;
       }
-      .active-link::after {
-          content: '';
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          width: 100%;
-          height: 2.5px;
-          background-color: #E41E26;
-      }
       
       /* Navbar scroll effect */
       #navbar.scrolled {
@@ -89,16 +80,6 @@
         .active-link {
             position: relative;
             color: #0F172A;
-        }
-        .active-link::after {
-            content: '';
-            position: absolute;
-            bottom: -8px; 
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 3px;
-            background-color: #E41E26;
         }
 
         @keyframes scroll {
@@ -124,15 +105,19 @@
             position: relative;
             color: #0F172A;
         }
-        .active-link::after {
+
+        .nav-link::after {
             content: '';
             position: absolute;
-            bottom: -8px; 
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 3px;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
             background-color: #E41E26;
+            transition: width 0.3s ease;
+        }
+        .active-link::after {
+            width: 100%;
         }
         .parallax {
             background-attachment: fixed;
@@ -188,7 +173,7 @@
     </script>
 </head>
 <body class="bg-background-light font-display text-text-light">
-<div class="relative w-full flex flex-col group/design-root overflow-x-hidden">
+<div class="relative w-full flex flex-col group/design-root">
   <!-- Nav -->
    <header class="sticky top-0 z-50 w-full bg-[#F5F7FA] transition-all duration-300" id="navbar">
 <div class="container mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6">

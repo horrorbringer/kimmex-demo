@@ -68,9 +68,7 @@
             color: #0F172A;
             font-weight: 600;
         }
-        .active-link::after {
-            width: 100%;
-        }
+        
         #navbar.scrolled {
             box-shadow: 0 4px 20px rgba(26, 35, 126, 0.08);
             background-color: rgba(245, 247, 250, 0.95);
@@ -111,6 +109,103 @@
         }
         .parallax {
             background-attachment: fixed;
+        }
+        .text-text-main{
+            color: #111827;
+        }
+
+        .nav-link {
+            position: relative;
+            overflow: hidden;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background-color: #E41E26;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #0F172A;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active-link {
+            position: relative;
+            color: #0F172A;
+            font-weight: 600;
+        }
+        .active-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2.5px;
+            background-color: #E41E26;
+        }
+        
+        /* Navbar scroll effect */
+        #navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.08);
+            background-color: rgba(245, 247, 250, 0.95);
+            backdrop-filter: blur(8px);
+        }
+        
+        /* Mobile menu animation */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-scroll {
+            animation: scroll 25s linear infinite;
+        }
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient-animation 15s ease infinite;
+        }
+        .group:hover .group-hover-pause {
+            animation-play-state: paused;
+        }
+        .active-link {
+            position: relative;
+            color: #0F172A;
+        }
+        .parallax {
+            background-attachment: fixed;
+        }
+        .nav-open .mobile-menu {
+            display: block;
+        }
+        .nav-open .hamburger-icon {
+            display: none;
+        }
+        .nav-open .close-icon {
+            display: block;
+        }
+        .close-icon {
+            display: none;
         }
         .text-text-main{
             color: #111827;
