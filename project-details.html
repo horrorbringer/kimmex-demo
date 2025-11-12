@@ -16,72 +16,75 @@
         font-family: 'Poppins', sans-serif;
       }
 
-        .active-link {
-            position: relative;
-            color: #0F172A;
+      .nav-link {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2.5px;
+        background-color: #E41E26;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .active-link {
+        color: #0F172A;
+        font-weight: 600;
+      }
+      .active-link::after {
+        width: 100%;
+      }
+      #navbar.scrolled {
+        box-shadow: 0 4px 20px rgba(26, 35, 126, 0.08);
+        background-color: rgba(245, 247, 250, 0.95);
+        backdrop-filter: blur(8px);
+      }
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
         }
-        .active-link::after {
-            content: '';
-            position: absolute;
-            bottom: -8px; 
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 3px;
-            background-color: #E41E26;
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
+      .mobile-menu {
+        animation: slideDown 0.3s ease;
+      }
 
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); }
-        }
-        .animate-scroll {
-            animation: scroll 25s linear infinite;
-        }
-        @keyframes gradient-animation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .animate-gradient {
-            background-size: 200% 200%;
-            animation: gradient-animation 15s ease infinite;
-        }
-        .group:hover .group-hover-pause {
-            animation-play-state: paused;
-        }
-        .active-link {
-            position: relative;
-            color: #0F172A;
-        }
-        .active-link::after {
-            content: '';
-            position: absolute;
-            bottom: -8px; 
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60%;
-            height: 3px;
-            background-color: #E41E26;
-        }
-        .parallax {
-            background-attachment: fixed;
-        }
-        .nav-open .mobile-menu {
-            display: block;
-        }
-        .nav-open .hamburger-icon {
-            display: none;
-        }
-        .nav-open .close-icon {
-            display: block;
-        }
-        .close-icon {
-            display: none;
-        }
-        .text-text-main{
-            color: #111827;
-        }
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+      }
+      .animate-scroll {
+        animation: scroll 25s linear infinite;
+      }
+      @keyframes gradient-animation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-gradient {
+        background-size: 200% 200%;
+        animation: gradient-animation 15s ease infinite;
+      }
+      .group:hover .group-hover-pause {
+        animation-play-state: paused;
+      }
+      .parallax {
+        background-attachment: fixed;
+      }
+      .text-text-main{
+        color: #111827;
+      }
     </style>
 <script>
       tailwind.config = {
@@ -113,41 +116,42 @@
 <!-- Wrapper for the entire page content -->
 <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
 <!-- Top Navigation Bar -->
- <header class="sticky top-0 z-50 w-full bg-[#F5F7FA] transition-shadow duration-300" id="navbar">
+ <header class="sticky top-0 z-50 w-full bg-[#F5F7FA] transition-all duration-300" id="navbar">
 <div class="container mx-auto flex h-20 max-w-[1200px] items-center justify-between px-6">
     <a href="index.html">
-        <div class="flex items-center justify-center gap-4 text-primary dark:text-white">
-            <div class="size-12 flex items-center">
+        <div class="flex items-center justify-center gap-3 text-primary dark:text-white flex-shrink-0">
+            <div class="size-12 flex items-center object-contain">
                 <img src="image/kimmex-logo.png" alt="kimmex">
             </div>
-            <h2 class="text-text-main text-lg font-heading font-bold tracking-tight">KIM MEX</h2>
+            <h2 class="text-text-main text-lg font-heading font-bold tracking-tight hidden sm:block">KIM MEX</h2>
         </div>
     </a>
-<nav class="hidden lg:flex items-center gap-6">
-    <a class="relative text-sm font-semibold tracking-[0.01em] text-[#0F172A]" href="index.html">Home</a>
-    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="about.html">About</a>
-    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="service.html">Services</a>
-    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A] active-link" href="projects.html">Projects</a>
-    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="news.html">News</a>
-    <a class="text-sm font-semibold tracking-[0.01em] text-[#94A3B8] transition-colors hover:text-[#0F172A]" href="contact.html">Contact</a>
+<nav class="hidden lg:flex items-center gap-8">
+    <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="index.html">Home</a>
+    <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="about.html">About</a>
+    <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="service.html">Services</a>
+    <a class="nav-link active-link text-sm text-[#0F172A]" href="projects.html">Projects</a>
+    <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="news.html">News</a>
+    <a class="nav-link text-sm text-[#64748B] hover:text-[#0F172A]" href="contact.html">Contact</a>
 </nav>
 <div class="flex items-center lg:hidden">
-<button class="p-2 text-[#0F172A]" id="mobile-menu-toggle">
+<button class="p-2 text-[#0F172A] hover:bg-gray-100 rounded-lg transition-colors" id="mobile-menu-toggle">
 <span class="material-symbols-outlined hamburger-icon">menu</span>
 <span class="material-symbols-outlined close-icon">close</span>
 </button>
 </div>
 </div>
 <div class="mobile-menu hidden w-full bg-white lg:hidden" id="mobile-menu">
-<div class="flex flex-col p-5">
-<a class="block w-full border-b border-gray-200 py-3 text-base font-semibold text-[#0F172A]" href="#">Home</a>
-<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">About</a>
-<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">Services</a>
-<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">Projects</a>
-<a class="block w-full border-b border-gray-200 py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">News</a>
-<a class="block w-full py-3 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="#">Contact</a>
+<div class="container mx-auto max-w-[1200px] flex flex-col px-6 py-4">
+<a class="block w-full py-4 text-base font-medium text-[#0F172A]" href="index.html">Home</a>
+<a class="block w-full py-4 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="about.html">About</a>
+<a class="block w-full py-4 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="service.html">Services</a>
+<a class="block w-full py-4 text-base font-medium text-[#0F172A]" href="projects.html">Projects</a>
+<a class="block w-full py-4 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="news.html">News</a>
+<a class="block w-full py-4 text-base font-medium text-[#94A3B8] hover:text-[#0F172A]" href="contact.html">Contact</a>
 </div>
 </div>
+</header>
 </header>
 <main class="flex-grow">
 <!-- 1. Hero Banner -->
@@ -399,26 +403,38 @@
     document.addEventListener('DOMContentLoaded', () => {
         const navbar = document.getElementById('navbar');
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const body = document.body;
+        const mobileMenu = document.getElementById('mobile-menu');
+        
         // Scroll behavior
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.style.boxShadow = '0 6px 20px rgba(15, 23, 42, 0.05)';
+            if (window.scrollY > 30) {
+                navbar.classList.add('scrolled');
             } else {
-                navbar.style.boxShadow = 'none';
+                navbar.classList.remove('scrolled');
             }
         });
+        
         // Mobile menu toggle
         mobileMenuToggle.addEventListener('click', () => {
-            body.classList.toggle('nav-open');
+            mobileMenu.classList.toggle('hidden');
         });
+        
         // Close mobile menu on link click
         const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', () => {
-                body.classList.remove('nav-open');
+                mobileMenu.classList.add('hidden');
             });
         });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+</script>
     });
 </script>
 </body></html>
